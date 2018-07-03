@@ -7,35 +7,27 @@
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
-
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-        <li>
-          <a href="https://gov.uk/design-system">
-            GOV.UK Design System
-          </a>
-        </li>
-      </ul>
+      <h1 class="page-header">Log in</h1>
+      <section class="col-sm-9">
+        <div class="region region-content">
+          <form class="user-login-form">
+            <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-name js-form-item-name form-group">
+              <label for="edit-name" class="control-label js-form-required form-required">Username</label>
+              <input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" aria-describedby="edit-name--description" class="form-text required form-control" type="text" id="edit-name" name="name" value="daniel.rex@informed.com" size="60" maxlength="60" aria-required="true" disabled>
+              <div id="edit-name--description" class="description help-block gds-form-hint">Enter your pir-form username.</div>
+            </div>
+            <div class="form-item js-form-item form-type-password js-form-type-password form-item-pass js-form-item-pass form-group">
+                <label for="edit-pass" class="control-label js-form-required form-required">Password</label>
+                <input aria-describedby="edit-pass--description" class="form-text required form-control" type="password" id="edit-pass" name="pass" size="60" maxlength="128" aria-required="true">
+                <div id="edit-name--description" class="description help-block gds-form-hint">Enter the password that accompanies your username.</div>
+            </div>
+            <div class="form-actions form-group js-form-wrapper form-wrapper">
+              <a href="/dashboard/index.html" class="button js-form-submit form-submit btn-primary btn icon-before">Log in</a>
+            </div>
+            <a href="/forgot-password">I forgot my password</a>
+          </form>
+        </div>
+      </section>
     </div>
 </div>
 

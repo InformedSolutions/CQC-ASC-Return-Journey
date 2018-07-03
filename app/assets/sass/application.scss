@@ -12,6 +12,10 @@ $govuk-global-styles: true;
 //cookie-banner
 @import "../../../docs/assets/sass/cookie-banner";
 
+// CQC specific styling
+@import 'cqc-styling';
+@import '_tables';
+
 .code {
   color: $govuk-text-colour;
   background-color: govuk-colour("grey-4");
@@ -38,6 +42,12 @@ $govuk-global-styles: true;
   border: 1px solid $govuk-border-colour;
   padding: 4px 4px 2px;
 }
+
+.col-sm-9 {
+  width: 82%;
+}
+
+
 
 
 // Local fixes to GOV.UK frontend
