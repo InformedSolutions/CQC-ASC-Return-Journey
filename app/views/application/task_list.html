@@ -1,69 +1,73 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 <div class="container">
-  <div class="row">
-    <section class="col-sm-9">
-      <form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
-        <div class="form-group form-group js-form-wrapper form-wrapper" id="edit-task-list">
-          <div class="form-section-title">Millennium House</div>
-          <br>
-          <div class="location_name_secondary_element">Update Millennium House</div>
-          <div class="container">
-            <div class="col-md-10 gds_task_list">
-              <h2>People that user your service</h2>
-              <hr>
-              <div class="row">
-                <div class="col-xs-9">
-                  <a href="people_that_use_your_service/number_of_people">Number of people</a>
-                </div>
-                <div class="col-xs-3">
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-xs-9">
-                  <a href="people_that_use_your_service/specialist_care">Specialist care you provide</a>
-                </div>
-                <div class="col-xs-3">
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-xs-9">
-                  <a href="people_that_use_your_service/nutrition_and_health">Nutrition and Hydration</a>
-                </div>
-                <div class="col-xs-3">
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-xs-9">
-                  <a href="people_that_use_your_service/restrictions_and_deprivation">Restrictions and deprivation of liberty</a>
-                </div>
-                <div class="col-xs-3">
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-xs-9">
-                  <a href="people_that_use_your_service/visting_arrangements">Visting Arrangements</a>
-                </div>
-                <div class="col-xs-3">
-                </div>
-              </div>
-              <hr>
-              <div class="row">
-                <div class="col-xs-9">
-                  <a href="people_that_use_your_service/end_of_life_care">End of life care</a>
-                </div>
-                <div class="col-xs-3">
-                </div>
-              </div>              
-            </div>
-          </div>
-        </div>
-  </div>
-  </form>
+	<div class="row">
+		<form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+			<div class="form-group form-group js-form-wrapper form-wrapper" id="edit-task-list">
+				<div class="form-section-title">Millennium House</div>
+				<br>
+				<div class="location_name_secondary_element">Update Millennium House</div>
+				<div class="container">
+					<ol class="app-task-list">
+						<li>
+							<h2 class="app-task-list__section">
+								<span class="app-task-list__section-number">1. </span> People that use your service
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+									<div class="app-task-list__task-name column-three-quarters">
+										<a href="people_that_use_your_service/number_of_people">Number of people</a>
+										{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
+										}}
+									</div>
+								</li>
+								<li class="app-task-list__item">
+									<div class="app-task-list__task-name column-three-quarters">
+										<a href="people_that_use_your_service/restrictions_and_deprivation">Restrictions and deprivation of liberty</a>
+										{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
+										}}
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h2 class="app-task-list__section">
+								<span class="app-task-list__section-number">2. </span> Staff numbers
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+									<div class="app-task-list__task-name column-three-quarters">
+										<a href="your_staff/staff_numbers">Number of people</a>
+										{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
+										}}
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h2 class="app-task-list__section">
+								<span class="app-task-list__section-number">3. </span> How you run your service
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+									<div class="app-task-list__task-name column-three-quarters">
+										<a href="how_you_run_your_service/capacity">Capacity</a>
+										{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
+										}}
+									</div>
+								</li>
+								<li class="app-task-list__item">
+									<div class="app-task-list__task-name column-three-quarters">
+										<a href="how_you_run_your_service/how_people_pay">How people pay for their care</a>
+										{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
+										}}
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</form>
+	</div>
 </div>
-</div>
-
 {% endblock %}

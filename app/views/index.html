@@ -5,28 +5,25 @@
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="page-header">Log in</h1>
-      <section class="col-sm-9">
-        <div class="region region-content">
-          <form class="user-login-form">
-            <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-name js-form-item-name form-group">
-              <label for="edit-name" class="control-label js-form-required form-required">Username</label>
-              <input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" aria-describedby="edit-name--description" class="form-text required form-control" type="text" id="edit-name" name="name" value="daniel.rex@informed.com" size="60" maxlength="60" aria-required="true" disabled>
-              <div id="edit-name--description" class="description help-block gds-form-hint">Enter your pir-form username.</div>
+<div class="container">
+    <div class="row">
+        <section class="col-sm-9">
+            <div class="govuk-label--xl">Log in</div>
+            <form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+              <div class="govuk-form-group" id="edit-task-list">
+                <label for="edit-name" class="govuk-label">Username</label>
+                <input class="form-control"  autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" type="text" id="edit-name" name="name" value="daniel.rex@informed.com" aria-required="true" disabled>
             </div>
-            <div class="form-item js-form-item form-type-password js-form-type-password form-item-pass js-form-item-pass form-group">
-                <label for="edit-pass" class="control-label js-form-required form-required">Password</label>
-                <input aria-describedby="edit-pass--description" class="form-text required form-control" type="password" id="edit-pass" name="pass" size="60" maxlength="128" aria-required="true">
-                <div id="edit-name--description" class="description help-block gds-form-hint">Enter the password that accompanies your username.</div>
+            <div class="govuk-form-group">
+                <label for="edit-pass" class="govuk-label">Password</label>
+                <div id="edit-name--description" class="guidance govuk-label">This is the password you used to register the above email with</div>
+                <input class="form-control" aria-describedby="edit-pass--description"type="password" id="edit-pass" name="pass" size="60" maxlength="128" aria-required="true">
             </div>
             <div class="form-actions form-group js-form-wrapper form-wrapper">
               <a href="/dashboard/index.html" class="button js-form-submit form-submit btn-primary btn icon-before">Log in</a>
             </div>
             <a href="/forgot-password">I forgot my password</a>
           </form>
-        </div>
       </section>
     </div>
 </div>

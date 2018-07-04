@@ -195,8 +195,8 @@ a:visited {
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   color: #fff;
-
 }
+
 
 .btn:hover {
   background-color: #00692f;
@@ -234,6 +234,53 @@ a:visited {
 
 }
 
+.btn-secondary {
+  background-color: #DEE0E2;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.3em 0.6em 0.25em 0.6em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #bfc1c3;
+  -moz-box-shadow: 0 2px 0 #bfc1c3;
+  box-shadow: 0 2px 0 #bfc1c3;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #000000;
+}
+
+.btn-secondary.active.focus, .btn-secondary.active:focus, .btn-secondary.focus, .btn-secondary:active.focus,
+.btn-secondary:active:focus, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .btn-secondary.active:active {
+
+  background-color: #DEE0E2;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  padding: 0.3em 0.6em 0.25em 0.6em;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 0 #bfc1c3;
+  -moz-box-shadow: 0 2px 0 #bfc1c3;
+  box-shadow: 0 2px 0 #bfc1c3;
+  font-size: 1em;
+  line-height: 1.25;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  color: #000000;
+
+}
+
 .quick-card h3 {
   border-top: 5px solid #005ea5;
   padding-top: 3px;
@@ -264,6 +311,7 @@ a:visited {
 .tweets .recent-tweets, .tweets .recent-tweets h3, .tweets .recent-tweets h4 a { color: #fff; }
 
 a.btn { color: #fff; }
+
 .tweets .more {
   padding-left: 40px;
 }
@@ -1538,4 +1586,14 @@ label.error {
 
 .guidance {
   color: #6f777b;
+}
+
+.column-three-quarters {
+  width: 75%;
+  float:left; 
+}
+
+.column-one-quarter {
+  width: 25%;
+  float:left; 
 }
