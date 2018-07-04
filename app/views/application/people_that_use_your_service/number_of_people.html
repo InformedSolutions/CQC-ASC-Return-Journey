@@ -1,31 +1,25 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="container">
-        <div class="row">
-          <section class="col-sm-9">
+    <div class="row">
+        <section class="col-sm-9">
             <form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
-              <div class="form-group form-group js-form-wrapper form-wrapper" id="edit-task-list">
-                <div class="form-section-title">Millennium House</div>
-                <br>
-                <div class="location_name_secondary_element">Update Millennium House</div>
-                <div class="container">
+                <div class="form-group form-group js-form-wrapper form-wrapper" id="edit-task-list">
+                    <div class="govuk-label--xl">Millennium House</div>
                     <div class="col-md-10 gds_task_list">
-                        <h2>People that user your service</h2>
-                        <div id="" class="form-inline form-item js-form-item form-type-number js-form-type-number form-item-q16-4 js-form-item-q16-4 form-group>">
-                            <label class="control-label js-form-required form-required" for="firstName">
-                            First name
-                            </label>
-                            <label class="gds-form-hint">
-                                asdsadsaddas
-                            </label>
-                            <input type="text" class="form-number required form-control" id="firstName" name="firstName" required="">
-                         </div>
+                        <h2 class="govuk-label--l">People that user your service</h2>
+                        <br>
+                        <div class="govuk-form-group grid-row">
+                            <label for="additional-phone" class="govuk-label">How many people do you care for as part of a regulated activity?</label>
+                            <label for="additional-phone" class="guidance govuk-label">Give the total number of people using your service now</label>
+                            <input class="form-control" type="text" id="additional-phone" name="additional-phone">
+                        </div>
                     </div>
-              </div>
-        </div>
-        </form>
-      </div>
-      </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
 
 
-{% endblock %}gfi
+{% endblock %}

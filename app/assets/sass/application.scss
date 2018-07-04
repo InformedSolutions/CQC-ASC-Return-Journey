@@ -16,6 +16,10 @@ $govuk-global-styles: true;
 @import 'cqc-styling';
 @import '_tables';
 
+// Import boostrap
+//@import "bootstrap/scss/bootstrap";
+//@import "bootstrap/scss/bootstrap-grid";
+
 .code {
   color: $govuk-text-colour;
   background-color: govuk-colour("grey-4");
