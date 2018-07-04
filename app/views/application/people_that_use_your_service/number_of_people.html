@@ -1,28 +1,26 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-
 <div class="container">
-    <div class="row">
-        <section class="col-sm-9">
-            <form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
-                <div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
-                    <div class="govuk-label--xl">Millennium House</div>
-                    <div class="gds_task_list">
-                        <h2 class="govuk-label--l">People that user your service</h2>
-                        <br>
-                        <div class="govuk-form-group">
-                            <label for="#-care-for" class="govuk-label">How many people do you care for as part of a regulated activity?</label>
-                            <label for="#-care-for" class="guidance govuk-label">Give the total number of people using your service now</label>
-                            <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                        </div>                                         
-                    </div>
-                </div>
-                <div class="govuk-form-group">
-                    <a href="/dashboard/" class="govuk-button">Save and come back later</a>
-                    <a href="restriction_and_deprivation.html" class="govuk-button">Continue</a>
-                </div>
-            </form>
-        </section>
-    </div>
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Millennium House</div>
+					<div class="gds_task_list">
+						<h2 class="govuk-label--l">People that user your service</h2>
+						<p class="govuk-label--m">Number of people</p>
+						<div class="govuk-form-group">
+							<label for="people-reg-activity" class="govuk-label">How many people do you care for as part of a regulated activity?</label>
+							<label for="people-reg-activity" class="guidance govuk-label">Give the total number of people using your service now</label>
+							<input class="form-control" type="text" id="people-reg-activity" name="people-reg-activity">
+						</div>
+					</div>
+				</div>
+				<div class="govuk-form-group">
+					<a href="/dashboard/" class="govuk-button">Save and come back later</a>
+					<a href="restriction_and_deprivation.html" class="govuk-button">Continue</a>
+				</div>
+			</form>
+		</section>
+	</div>
 </div>
-
 {% endblock %}

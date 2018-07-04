@@ -1,72 +1,69 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
-
 <div class="container">
-    <div class="row">
-        <section class="col-sm-9">
-            <form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
-                <div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
-                    <div class="govuk-label--xl">Millennium House</div>
-                    <div class="col-md-10 gds_task_list">
-                        <h2 class="govuk-label--l">People that user your service</h2>
-                        <br>
-                        <div class="govuk-form-group">
-                            <label for="#-care-for" class="govuk-label">How many:</label>
-                            <br>
-                            <div class="govuk-form-group">
-                                <label for="#-care-for" class="govuk-label">people does your service employ?</label>
-                                <label for="#-care-for" class="guidance govuk-label">All staff, including temporary, pool and agency staff, students and volunteers. As well as care staff, include people who do things we do not regulate, like cooking or cleaning. Do not include vacancies</label>
-                                <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                            </div>
-                            <div class="govuk-form-group">
-                                <label for="#-care-for" class="govuk-label">full time equivalent posts do you employ?</label>
-                                <div class="webform-element-more--link">
-                                    <a href="#more">What is classified as full time</a>
-                                </div>
-                                <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                            </div>
-                            <div class="govuk-form-group">
-                                <label for="#-care-for" class="govuk-label">of your staff give care as part of a regulated activity?</label>
-                                <div class="webform-element-more--link">
-                                    <a href="#more">Who undertakes regulated activities</a>
-                                </div>
-                                <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                            </div>
-                            <div class="govuk-form-group">
-                                    <label for="#-care-for" class="govuk-label">of your staff are registered nurses?</label>
-                                    <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                            </div>
-                            <div class="govuk-form-group">
-                                    <label for="#-care-for" class="govuk-label">are volunteers?</label>                                  
-                                    <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                            </div> 
-                            <div class="govuk-form-group">
-                                    <label for="#-care-for" class="govuk-label">students are on placement with your service?</label>
-                                    <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                            </div> 
-                            <div class="govuk-form-group">
-                                    <label for="#-care-for" class="govuk-label">apprentices do you have?</label>
-                                    <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                            </div> 
-                            <div class="govuk-form-group">
-                                    <label for="#-care-for" class="govuk-label">many of your staff started less than 12 weeks ago?</label>
-                                    <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                            </div>   
-                            <div class="govuk-form-group">
-                                    <label for="#-care-for" class="govuk-label">staff vacancies do you have?</label>
-                                    <input class="form-control" type="text" id="#-care-for" name="#_care-for">
-                            </div>                                                    
-                        </div>
-                    </div>
-                </div>
-                <div class="govuk-form-group">
-                    <a href="/" class="btn-primary">Continue</a>
-                </div>
-                <div class="govuk-form-group">
-                    <a href="/dashboard/index.html" class="btn-primary">Save and come back later</a>
-                </div>
-            </form>
-        </section>
-    </div>
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Millennium House</div>
+					<div class="col-md-10 gds_task_list">
+						<h2 class="govuk-label--l">Your staff</h2>
+						<p class="govuk-label--m">Staff numbers</p>
+						<p class="govuk-label--m"></p>
+						<div class="govuk-form-group">
+							<label class="govuk-label">How many:</label>
+							<br>
+							<div class="govuk-form-group">
+								<label for="service-employ" class="govuk-label">people does your service employ?</label>
+								<label for="service-employ" class="guidance govuk-label">All staff, including temporary, pool and agency staff, students and volunteers. As well as care staff, include people who do things we do not regulate, like cooking or cleaning. Do not include vacancies</label>
+								<input class="form-control" type="text" id="service-employ" name="service-employ">
+							</div>
+							<div class="govuk-form-group">
+								<label for="post-employ" class="govuk-label">full time equivalent posts do you employ?</label>
+								<div class="webform-element-more--link">
+									<a href="#more">What is classified as full time</a>
+								</div>
+								<input class="form-control" type="text" id="post-employ" name="post-employ">
+							</div>
+							<div class="govuk-form-group">
+								<label for="staff-reg-activity" class="govuk-label">of your staff give care as part of a regulated activity?</label>
+								<div class="webform-element-more--link">
+									<a href="#more">Who undertakes regulated activities</a>
+								</div>
+								<input class="form-control" type="text" id="staff-reg-activity" name="staff-reg-activity">
+							</div>
+							<div class="govuk-form-group">
+								<label for="reg-nurse" class="govuk-label">of your staff are registered nurses?</label>
+								<input class="form-control" type="text" id="reg-nurse" name="reg-nurse">
+							</div>
+							<div class="govuk-form-group">
+								<label for="volunteer" class="govuk-label">are volunteers?</label>                                  
+								<input class="form-control" type="text" id="volunteer" name="volunteer">
+							</div>
+							<div class="govuk-form-group">
+								<label for="placement-student" class="govuk-label">students are on placement with your service?</label>
+								<input class="form-control" type="text" id="placement-student" name="placement-student">
+							</div>
+							<div class="govuk-form-group">
+								<label for="apprentice" class="govuk-label">apprentices do you have?</label>
+								<input class="form-control" type="text" id="apprentice" name="apprentice">
+							</div>
+							<div class="govuk-form-group">
+								<label for="staff-less-than-12" class="govuk-label">many of your staff started less than 12 weeks ago?</label>
+								<input class="form-control" type="text" id="staff-less-than-12" name="staff-less-than-12">
+							</div>
+							<div class="govuk-form-group">
+								<label for="staff-vacancy" class="govuk-label">staff vacancies do you have?</label>
+								<input class="form-control" type="text" id="staff-vacancy" name="staff-vacancy">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="govuk-form-group">
+					<a href="/dashboard/index.html" class="govuk-button">Save and come back later</a>
+					<a href="check_your_answers.html" class="govuk-button">Continue</a>
+				</div>
+			</form>
+		</section>
+	</div>
 </div>
-
 {% endblock %}
