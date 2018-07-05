@@ -75,3 +75,48 @@ $govuk-global-styles: true;
 .app-task-list__task-name {
   font-size: 25px;
 }
+
+.panel {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both;
+  border-left-style: solid;
+  border-color: #bfc1c3;
+  padding: 0.78947em;
+  margin-bottom: 0.78947em;
+}
+
+.panel-border-narrow {
+  border-left-width: 5px;
+}
+
+details {
+  display: block;
+  clear: both;
+}
+
+details summary {
+  display: inline-block;
+  color: #005ea5;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0.26316em;
+}
+
+details summary:hover {
+  color: #2b8cc4;
+}
+
+details summary:focus {
+  outline: 3px solid #ffbf47;
+}
+
+details .summary {
+  text-decoration: underline;
+}
+
+details .arrow {
+  margin-right: .35em;
+  font-style: normal;
+}

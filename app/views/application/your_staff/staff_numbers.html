@@ -20,14 +20,40 @@
 							<div class="govuk-form-group">
 								<label for="post-employ" class="govuk-label">full time equivalent posts do you employ?</label>
 								<div class="webform-element-more--link">
-									<a href="#more">What is classified as full time</a>
+									<details>
+										<summary><span class="summary">What is classified as full time?</span></summary>
+										<div class="panel panel-border-narrow">
+											<p>Use 37 hours a week as your basis for full time, even if your full time hours are different</p>
+											<p>How to calculate full time equivalent posts</p>
+											<p>Full time equivalent is a way of setting out the number of hours people work in a given period. It divides the total number of staff hours by the hours for one full time employee. To calculate it:</p>
+											<ul>
+												<li>add together the hours worked by all your staff in one week</li>
+												<li>divide the total by 37</li>
+											</ul>
+
+										</div>
+									</details>
 								</div>
 								<input class="form-control" type="text" id="post-employ" name="post-employ" value={{ data['post-employ'] }}>
 							</div>
 							<div class="govuk-form-group">
 								<label for="staff-reg-activity" class="govuk-label">of your staff give care as part of a regulated activity?</label>
 								<div class="webform-element-more--link">
-									<a href="#more">Who undertakes regulated activities</a>
+									<details>
+										<summary><span class="summary">Who undertakes regular activities?</span></summary>
+										<div class="panel panel-border-narrow">
+											<p>Which staff to include:</p>
+											<ul>
+												<li>Give the number of people who provide care we regulate as part of their day to day job, for example care workers and nurses.</li>
+												<li>Do not include people who only do things we do not regulate, like cooking or cleaning.</li>
+												<li>Count permanent, temporary, pool and agency staff, students and volunteers.</li>
+												<li>Include staff on zero hour contracts.</li>
+												<li>Do not include vacancies.</li>
+
+											</ul>
+
+										</div>
+									</details>
 								</div>
 								<input class="form-control" type="text" id="staff-reg-activity" name="staff-reg-activity" value={{ data['staff-reg-activity'] }}>
 							</div>
