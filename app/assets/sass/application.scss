@@ -72,3 +72,6 @@ $govuk-global-styles: true;
 // @import 'patterns/task-list';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.app-task-list__task-name {
+  font-size: 25px;
+}
