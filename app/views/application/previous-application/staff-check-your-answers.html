@@ -1,0 +1,96 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            Check your answers before sending your application
+        </h1>
+
+        <!-- only add a heading for a list if there is more than one list -->
+        <h2 class="govuk-heading-m">
+            People that use your service
+        </h2>
+
+        <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+        <!--   * `app-check-your-answers--short` for short questions -->
+        <!--   * `app-check-your-answers__questions-long` for long questions -->
+        <!--   * none for single group of q&a -->
+        <dl class="app-check-your-answers app-check-your-answers--short">
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many people does your service employ?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    110
+                </dd>
+            </div>
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many full time equivalent posts do you employ?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    92
+                </dd>
+            </div>
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many of your staff give care as part of a regulated activity?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    65
+                </dd>
+            </div>
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    62
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['reg-nurse'] }}
+                </dd>
+            </div>
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many are volunteers?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    3
+                </dd>
+            </div>
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many students are on placement with your service?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    0
+                </dd>
+            </div>
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many apprentices do you have?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    2
+                </dd>
+            </div>
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many of your staff started less than 12 weeks ago?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    2
+                </dd>
+            </div>
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many staff vacancies do you have?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    3
+                </dd>
+            </div>
+        </dl>
+    </div>
+</div>
+{% endblock %}
