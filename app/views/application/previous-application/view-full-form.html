@@ -1,0 +1,207 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<div class="container">
+	<div class="row">
+		<form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+			<div class="form-group form-group js-form-wrapper form-wrapper" id="edit-task-list">
+				<div class="form-section-title">Millennium House</div>
+				<br>
+				<div class="location_name_secondary_element">Update Millennium House</div>
+				<div class="container">
+					<ol class="app-task-list">
+						<li>
+							<h2 class="app-task-list__section">
+								<span class="app-task-list__section-number">1. </span> People that use your service
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+									<a class="left" href="people_that_use_your_service/number_of_people">Number of people</a>
+									<p class="left">Last updated: 31st April 2018</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="people_that_use_your_service/number_of_people">Specialist care you provide</a>
+									<p class="left">Last updated: 31st January 2018</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="people_that_use_your_service/number_of_people">Nutrition and hydration</a>
+									<p class="left">Last updated: 31st October 2017</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Restrictions and deprivation of liberty</a>
+									<p class="left">Last updated: 31st January 2018</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Mental capacity</a>
+									<p class="left">Last updated: 31st April 2018</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Visiting arrangements</a>
+									<p class="left">Last updated: 31st October 2017</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">End of life care</a>
+									<p class="left">Last updated: 31st January 2018</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Equality, dignity and human rights</a>
+									<p class="left">Last updated: 31st January 2018</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>							
+							</ul>
+						</li>
+						<li>
+							<h2 class="app-task-list__section">
+								<span class="app-task-list__section-number">2. </span> Your staff
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+									<a class="left" href="staff-check-your-answers">Staff numbers</a>
+									<p class="left">Last updated: 31st April 2018</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Qualifications and skills</a>
+									<p class="left">Last updated: 31st April 2018</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Training and supervision</a>
+									<p class="left">Last updated: 31st October 2017</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h2 class="app-task-list__section">
+								<span class="app-task-list__section-number">3. </span> How you run your service
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/capacity">Admissions</a>
+									<p class="left">Last updated: 31st April 2018</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/capacity">Capacity</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/how_people_pay">Commissioning</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/how_people_pay">How people pay for their care</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/how_people_pay">How you identify risks</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/death_and_serious_incident">Deaths and serious incidents</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/how_people_pay">Medicines management</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/how_people_pay">How you work with other services</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/how_people_pay">How you involve your local community</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/how_people_pay">Improvement, complaints and feedback</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a class="left" href="how_you_run_your_service/how_people_pay">Records and personal information</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h2 class="app-task-list__section">
+								<span class="app-task-list__section-number">2. </span> Quality of care
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+									<a class="left" href="your_staff/staff_numbers">Safe</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Effective</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Caring</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Responsive to people's needs</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+								<li class="app-task-list__item">
+									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Well led</a>
+									<p class="left">Last updated: 31st April 2019</p>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "right", text: "Completed" })
+									}}
+								</li>
+							</ul>
+					</li>
+					</ol>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}

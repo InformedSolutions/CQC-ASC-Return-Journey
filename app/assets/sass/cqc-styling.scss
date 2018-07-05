@@ -1588,12 +1588,26 @@ label.error {
   color: #6f777b;
 }
 
-.column-three-quarters {
-  width: 75%;
+.left {
+  width: 33%;
+  margin-left: auto;
+  margin-right: auto;
   float:left; 
 }
 
-.column-one-quarter {
-  width: 25%;
+.centre {
+  margin-right: 27%;
   float:left; 
 }
+
+
+.right {
+  width: 11%;
+  float:left; 
+}
+
+.width {
+  width: 100%;
+}
+
+
