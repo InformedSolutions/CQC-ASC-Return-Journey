@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<section class="col-sm-9">
-			<form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+			<form class="form" method="post" action="check_your_answers">
 				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
 					<div class="govuk-label--xl">Millennium House</div>
 					<div class="col-md-10 gds_task_list">
@@ -11,13 +11,13 @@
 						<div class="govuk-form-group">
 							<label for="dols" class="govuk-label">How many people are subject to a DoLS authorisation?</label>
 							<label for="dols" class="guidance govuk-label">This means a local authority has given permission for the person to be deprived of their liberty</label>
-							<input class="form-control" type="text" id="dols" name="dols">
+							<input class="govuk-input" type="text" id="dols" name="dols" value={{ data['dols'] }}>
 						</div>
 					</div>
 				</div>
 				<div class="govuk-form-group">
 					<a href="/dashboard/index.html" class="govuk-button">Save and come back later</a>
-					<a href="check_your_answers.html" class="govuk-button">Continue</a>
+					<input class="govuk-button" type="submit" value="Continue">
 				</div>
 			</form>
 		</section>

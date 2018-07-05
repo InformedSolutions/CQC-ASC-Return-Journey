@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<section class="col-sm-9">
-			<form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+			<form class="form" method="post" action="how_people_pay">
 				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
 					<div class="govuk-label--xl">Millennium House</div>
 					<div class="col-md-10 gds_task_list">
@@ -11,13 +11,13 @@
 						<div class="govuk-form-group">
 							<label for="how-many-beds" class="govuk-label">How many beds does your service have for people receiving care as part of a regulated activity?</label>
 							<label for="how-many-beds" class="guidance govuk-label">Give the total number including unoccupied beds. Just count beds that are only used for people receiving care as part of a regulated activity</label>
-							<input class="form-control" type="text" id="how-many-beds" name="how-many-beds">
+							<input class="form-control" type="text" id="how-many-beds" name="how-many-beds" value={{ data['how-many-beds'] }}>
 						</div>
 					</div>
 				</div>
 				<div class="govuk-form-group">
 					<a href="/dashboard/index.html" class="govuk-button">Save and come back later</a>
-					<a href="how_people_pay.html" class="govuk-button">Continue</a>
+					<input class="govuk-button" type="submit" value="Continue">
 				</div>
 			</form>
 		</section>

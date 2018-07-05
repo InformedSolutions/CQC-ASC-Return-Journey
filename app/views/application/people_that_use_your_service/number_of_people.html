@@ -2,22 +2,22 @@
 <div class="container">
 	<div class="row">
 		<section class="col-sm-9">
-			<form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+			<form class="form" method="post" action="restriction_and_deprivation">
 				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
 					<div class="govuk-label--xl">Millennium House</div>
 					<div class="gds_task_list">
-						<h2 class="govuk-label--l">People that user your service</h2>
+						<h2 class="govuk-label--l">People that use your service</h2>
 						<p class="govuk-label--m">Number of people</p>
 						<div class="govuk-form-group">
-							<label for="people-reg-activity" class="govuk-label">How many people do you care for as part of a regulated activity?</label>
-							<label for="people-reg-activity" class="guidance govuk-label">Give the total number of people using your service now</label>
-							<input class="form-control" type="text" id="people-reg-activity" name="people-reg-activity">
+							<label for="peopleNumber" class="govuk-label">How many people do you care for as part of a regulated activity?</label>
+							<label for="peopleNumber" class="guidance govuk-label">Give the total number of people using your service now</label>
+							<input class="govuk-input" type="text" id="peopleNumber" name="peopleNumber" value={{ data['peopleNumber'] }}>
 						</div>
 					</div>
 				</div>
 				<div class="govuk-form-group">
 					<a href="/dashboard/" class="govuk-button">Save and come back later</a>
-					<a href="restriction_and_deprivation.html" class="govuk-button">Continue</a>
+					<input class="govuk-button" type="submit" value="Continue">
 				</div>
 			</form>
 		</section>

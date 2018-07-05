@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<section class="col-sm-9">
-			<form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+			<form class="form" method="post" action="check_your_answers">
 				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
 					<div class="govuk-label--xl">Millennium House</div>
 					<div class="col-md-10 gds_task_list">
@@ -15,52 +15,52 @@
 							<div class="govuk-form-group">
 								<label for="service-employ" class="govuk-label">people does your service employ?</label>
 								<label for="service-employ" class="guidance govuk-label">All staff, including temporary, pool and agency staff, students and volunteers. As well as care staff, include people who do things we do not regulate, like cooking or cleaning. Do not include vacancies</label>
-								<input class="form-control" type="text" id="service-employ" name="service-employ">
+								<input class="form-control" type="text" id="service-employ" name="service-employ" value={{ data['service-employ'] }}>
 							</div>
 							<div class="govuk-form-group">
 								<label for="post-employ" class="govuk-label">full time equivalent posts do you employ?</label>
 								<div class="webform-element-more--link">
 									<a href="#more">What is classified as full time</a>
 								</div>
-								<input class="form-control" type="text" id="post-employ" name="post-employ">
+								<input class="form-control" type="text" id="post-employ" name="post-employ" value={{ data['post-employ'] }}>
 							</div>
 							<div class="govuk-form-group">
 								<label for="staff-reg-activity" class="govuk-label">of your staff give care as part of a regulated activity?</label>
 								<div class="webform-element-more--link">
 									<a href="#more">Who undertakes regulated activities</a>
 								</div>
-								<input class="form-control" type="text" id="staff-reg-activity" name="staff-reg-activity">
+								<input class="form-control" type="text" id="staff-reg-activity" name="staff-reg-activity" value={{ data['staff-reg-activity'] }}>
 							</div>
 							<div class="govuk-form-group">
 								<label for="reg-nurse" class="govuk-label">of your staff are registered nurses?</label>
-								<input class="form-control" type="text" id="reg-nurse" name="reg-nurse">
+								<input class="form-control" type="text" id="reg-nurse" name="reg-nurse" value={{ data['reg-nurse'] }}>
 							</div>
 							<div class="govuk-form-group">
 								<label for="volunteer" class="govuk-label">are volunteers?</label>                                  
-								<input class="form-control" type="text" id="volunteer" name="volunteer">
+								<input class="form-control" type="text" id="volunteer" name="volunteer" value={{ data['volunteer'] }}>
 							</div>
 							<div class="govuk-form-group">
 								<label for="placement-student" class="govuk-label">students are on placement with your service?</label>
-								<input class="form-control" type="text" id="placement-student" name="placement-student">
+								<input class="form-control" type="text" id="placement-student" name="placement-student" value={{ data['placement-student'] }}>
 							</div>
 							<div class="govuk-form-group">
 								<label for="apprentice" class="govuk-label">apprentices do you have?</label>
-								<input class="form-control" type="text" id="apprentice" name="apprentice">
+								<input class="form-control" type="text" id="apprentice" name="apprentice" value={{ data['apprentice'] }}>
 							</div>
 							<div class="govuk-form-group">
 								<label for="staff-less-than-12" class="govuk-label">many of your staff started less than 12 weeks ago?</label>
-								<input class="form-control" type="text" id="staff-less-than-12" name="staff-less-than-12">
+								<input class="form-control" type="text" id="staff-less-than-12" name="staff-less-than-12" value={{ data['staff-less-than-12'] }}>
 							</div>
 							<div class="govuk-form-group">
 								<label for="staff-vacancy" class="govuk-label">staff vacancies do you have?</label>
-								<input class="form-control" type="text" id="staff-vacancy" name="staff-vacancy">
+								<input class="form-control" type="text" id="staff-vacancy" name="staff-vacancy" value={{ data['staff-vacancy'] }}>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="govuk-form-group">
 					<a href="/dashboard/index.html" class="govuk-button">Save and come back later</a>
-					<a href="check_your_answers.html" class="govuk-button">Continue</a>
+					<input class="govuk-button" type="submit" value="Continue">
 				</div>
 			</form>
 		</section>
