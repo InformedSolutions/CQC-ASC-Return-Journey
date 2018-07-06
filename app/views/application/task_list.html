@@ -14,27 +14,29 @@
 							</h2>
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
-									<div class="app-task-list__task-name column-three-quarters">
+									<div class="app-task-list__task-name">
 										<a href="people_that_use_your_service/number_of_people">People that use your service</a>
-										{% if peopleService %}{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
-										}}
-										{% endif %}
 									</div>
+										{{ govukTag({
+											attributes: { id: "eligibility-completed" },
+											classes: "app-task-list__task-completed",
+											text: "Completed"
+										  }) }}
 								</li>
 								<li class="app-task-list__item">
-									<div class="app-task-list__task-name column-three-quarters">
+									<div class="app-task-list__task-name">
 										<a href="your_staff/staff_numbers">Staff numbers</a>
-										{% if staffNumbers %}{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
-										}}
-										{% endif %}
 									</div>
-								</li>
-								<li class="app-task-list__item">
-									<div class="app-task-list__task-name column-three-quarters">
-										<a href="how_you_run_your_service/capacity">How you run your service</a>
 										{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
 										}}
+								</li>
+								<li class="app-task-list__item">
+									<div class="app-task-list__task-name">
+										<a href="how_you_run_your_service/capacity">How you run your service</a>
 									</div>
+									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
+									}}
+									<p>{{detail}}</p>
 								</li>
 							</ul>
 						</li>

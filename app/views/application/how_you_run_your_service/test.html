@@ -1,0 +1,75 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+<div class="govuk-label--xl">Millennium House</div>
+<div class="col-md-10 gds_task_list">
+<h2 class="govuk-label--l">How you run your service</h2>
+<p class="govuk-label--m">Death and serious indicents</p>
+<div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <div class="govuk-label">
+                In the past 12 months, have you had to tell anyone about something that went wrong with their own or a relative's care?
+            </div>
+          </legend>
+          <div class="govuk-radios" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+              Yes
+            </label>
+            </div>
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email">
+                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                    No
+                </label>
+            </div>
+            <br>
+            <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+                    <div class="govuk-form-group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                                <div class="govuk-label">
+                                    Have you kept:
+                                </div>
+                            </legend>
+                    <label for="fully-funded-nhs" class="govuk-label govuk-form-group">records of what you told them when the incident happened?</label>
+                    <div class="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="told-them-1" name="told-them-1" type="radio">
+                                <label class="govuk-label govuk-radios__label" for="told-them-1">
+                                Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item govuk-label">
+                                <input class="govuk-radios__input" id="told-them-2" name="told-them-2" type="radio">
+                                <label class="govuk-label govuk-radios__label" for="told-them-2">
+                                No
+                                </label>
+                            </div>
+                            <br>
+                            <label for="fully-funded-nhs" class="govuk-label govuk-form-group">copies of what you put in writing to them?</label>
+                            <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="write-to-them-1" name="write-to-them-1" type="radio" value="england">
+                                    <label class="govuk-label govuk-radios__label" for="write-to-them-1">
+                                    Yes
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="write-to-them-2" name="write-to-them-2" type="radio" value="scotland">
+                                    <label class="govuk-label govuk-radios__label" for="write-to-them-2">
+                                    No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+      
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-form-group">
+        <a href="/dashboard/index.html" role="button" class="govuk-button">Save and come back later</a>
+        <a href="../task_list.html" role="button" class="govuk-button">Continue</a>
+        </div>
+    </div>
+      {% endblock %}

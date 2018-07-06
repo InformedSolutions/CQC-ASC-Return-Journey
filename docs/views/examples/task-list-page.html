@@ -81,11 +81,14 @@
               <a class="app-task-list__task-name" href="#" aria-describedby="medical-information-completed">
                 Give medical information
               </a>
+              {% if peopleService %}
+              {%
               {{ govukTag({
                 attributes: { id: "medical-information-completed" },
                 classes: "app-task-list__task-completed",
                 text: "Completed"
               }) }}
+              %}
             </li>
           </ul>
         </li>
