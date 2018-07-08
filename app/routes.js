@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
 
 router.get('/application/task_list', function (req, res) {
   // Complete tag
-  req.session.peopleService = req.session.staffNumbers || req.query['peopleService'] || false;
+  req.session.peopleService = req.session.peopleService || req.query['peopleService'] || false;
   req.session.staffNumbers = req.session.staffNumbers || req.query['staffNumbers'] || false;
   req.session.howService = req.session.howService || req.query['howService'] || false;
   req.session.reviewService = req.session.reviewService || req.query['reviewService'] || false;
@@ -20,6 +20,16 @@ router.get('/application/task_list', function (req, res) {
     staffNumbers: req.session.staffNumbers,
     howService: req.session.howService,
     reviewService: req.session.reviewService
+    });
+});
+
+
+
+router.post('/application/how_you_run_your_service/check_your_answers', function (req, res) {
+  // Complete tag
+
+  res.render('application/how_you_run_your_service/check_your_answers', {
+    optional: true
     });
 });
 

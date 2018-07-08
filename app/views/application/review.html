@@ -10,10 +10,10 @@
 		<!-- only add a heading for a list if there is more than one list -->
 		<h2 class="govuk-heading-l">
 			People that use your service
-        </h2>
-        <h2 class="govuk-heading-m">
-            Number of people
-        </h2>
+		</h2>
+		<h2 class="govuk-heading-m">
+			Number of people
+		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
 		<!--   * `app-check-your-answers__questions-long` for long questions -->
@@ -27,15 +27,15 @@
 					{{ data['peopleNumber'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="number_of_people">
+					<a href="people_that_use_your_service/number_of_people">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
-            </div>
-            <br>
-            <h2 class="govuk-heading-m">
-                    Restriction and deprivation
-            </h2>
+			</div>
+			<br>
+			<h2 class="govuk-heading-m">
+				Restriction and deprivation
+			</h2>
 			<div class="app-check-your-answers__contents">
 				<dt class="app-check-your-answers__question">
 					How many people are subject to a DoLS authorisation?
@@ -44,152 +44,143 @@
 					{{ data['dols'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="restriction_and_deprivation">
+					<a href="people_that_use_your_service/restriction_and_deprivation">
 					Change<span class="govuk-visually-hidden"> DoLS</span>
 					</a>
 				</dd>
 			</div>
 		</dl>
-        <br>
-        
-                <!-- only add a heading for a list if there is more than one list -->
-				<h2 class="govuk-heading-l">
-						Your staff
-					</h2>
-					<h2 class="govuk-heading-m">
-						Staff numbers
-					</h2>
-                    <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
-                    <!--   * `app-check-your-answers--short` for short questions -->
-                    <!--   * `app-check-your-answers__questions-long` for long questions -->
-                    <!--   * none for single group of q&a -->
-                    <dl class="app-check-your-answers app-check-your-answers--short">
-                        <div class="app-check-your-answers__contents">
-                            <dt class="app-check-your-answers__question">
-                                How many people does your service employ?
-                            </dt>
-                            <dd class="app-check-your-answers__answer">
-                                {{ data['service-employ'] }}
-                            </dd>
-                            <dd class="app-check-your-answers__change">
-                                <a href="staff_numbers">
-                                    Change<span class="govuk-visually-hidden"> number of people</span>
-                                </a>
-                            </dd>
-                        </div>
-            
-                        <div class="app-check-your-answers__contents">
-                            <dt class="app-check-your-answers__question">
-                                How many full time equivalent posts do you employ?
-                            </dt>
-                            <dd class="app-check-your-answers__answer">
-                                {{ data['post-employ'] }}
-                            </dd>
-                            <dd class="app-check-your-answers__change">
-                                <a href="staff_numbers">
-                                    Change<span class="govuk-visually-hidden"> DoLS</span>
-                                </a>
-                            </dd>
-                        </div>
-            
-                        <div class="app-check-your-answers__contents">
-                            <dt class="app-check-your-answers__question">
-                                How many of your staff give care as part of a regulated activity?
-                            </dt>
-                            <dd class="app-check-your-answers__answer">
-                                {{ data['staff-reg-activity'] }}
-                            </dd>
-                            <dd class="app-check-your-answers__change">
-                                <a href="staff_numbers">
-                                    Change<span class="govuk-visually-hidden"> DoLS</span>
-                                </a>
-                            </dd>
-                        </div>
-            
-                        <div class="app-check-your-answers__contents">
-                            <dt class="app-check-your-answers__question">
-                                How many of your staff are registered nurses?
-                            </dt>
-                            <dd class="app-check-your-answers__answer">
-                                {{ data['reg-nurse'] }}
-                            </dd>
-                            <dd class="app-check-your-answers__change">
-                                <a href="staff_numbers">
-                                    Change<span class="govuk-visually-hidden"> DoLS</span>
-                                </a>
-                            </dd>
-                        </div>
-            
-                        <div class="app-check-your-answers__contents">
-                            <dt class="app-check-your-answers__question">
-                                How many are volunteers?
-                            </dt>
-                            <dd class="app-check-your-answers__answer">
-                                {{ data['volunteer'] }}
-                            </dd>
-                            <dd class="app-check-your-answers__change">
-                                <a href="staff_numbers">
-                                    Change<span class="govuk-visually-hidden"> DoLS</span>
-                                </a>
-                            </dd>
-                        </div>
-            
-                        <div class="app-check-your-answers__contents">
-                            <dt class="app-check-your-answers__question">
-                                How many students are on placement with your service?
-                            </dt>
-                            <dd class="app-check-your-answers__answer">
-                                {{ data['placement-student'] }}
-                            </dd>
-                            <dd class="app-check-your-answers__change">
-                                <a href="staff_numbers">
-                                    Change<span class="govuk-visually-hidden"> DoLS</span>
-                                </a>
-                            </dd>
-                        </div>
-            
-                        <div class="app-check-your-answers__contents">
-                            <dt class="app-check-your-answers__question">
-                                How many apprentices do you have?
-                            </dt>
-                            <dd class="app-check-your-answers__answer">
-                                {{ data['apprentice'] }}
-                            </dd>
-                            <dd class="app-check-your-answers__change">
-                                <a href="staff_numbers">
-                                    Change<span class="govuk-visually-hidden"> DoLS</span>
-                                </a>
-                            </dd>
-                        </div>
-            
-                        <div class="app-check-your-answers__contents">
-                            <dt class="app-check-your-answers__question">
-                                How many of your staff started less than 12 weeks ago?
-                            </dt>
-                            <dd class="app-check-your-answers__answer">
-                                {{ data['staff-less-than-12'] }}
-                            </dd>
-                            <dd class="app-check-your-answers__change">
-                                <a href="staff_numbers">
-                                    Change<span class="govuk-visually-hidden"> DoLS</span>
-                                </a>
-                            </dd>
-                        </div>
-            
-                        <div class="app-check-your-answers__contents">
-                            <dt class="app-check-your-answers__question">
-                                How many staff vacancies do you have?
-                            </dt>
-                            <dd class="app-check-your-answers__answer">
-                                {{ data['staff-vacancy'] }}
-                            </dd>
-                            <dd class="app-check-your-answers__change">
-                                <a href="staff_numbers">
-                                    Change<span class="govuk-visually-hidden"> DoLS</span>
-                                </a>
-                            </dd>
-                        </div>
-                    </dl>
+		<br>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-l">
+			Your staff
+		</h2>
+		<h2 class="govuk-heading-m">
+			Staff numbers
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people does your service employ?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['service-employ'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="your_staff/staff_numbers">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many full time equivalent posts do you employ?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['post-employ'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="your_staff/staff_numbers">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many of your staff give care as part of a regulated activity?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['staff-reg-activity'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="your_staff/staff_numbers">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many of your staff are registered nurses?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['reg-nurse'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="your_staff/staff_numbers">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many are volunteers?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['volunteer'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="your_staff/staff_numbers">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many students are on placement with your service?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['placement-student'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="your_staff/staff_numbers">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many apprentices do you have?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['apprentice'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="your_staff/staff_numbers">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many of your staff started less than 12 weeks ago?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['staff-less-than-12'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="your_staff/staff_numbers">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many staff vacancies do you have?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['staff-vacancy'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="your_staff/staff_numbers">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
 		<br>
 		<h1 class="govuk-heading-l">
 			How you run your service
@@ -211,7 +202,7 @@
 					{{ data['how-many-beds'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="capacity">
+					<a href="how_you_run_your_service/capacity">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
@@ -235,7 +226,7 @@
 					{{ data['fully-funded'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="how_people_pay">
+					<a href="how_you_run_your_service/how_people_pay">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
@@ -248,7 +239,7 @@
 					{{ data['fully-funded-nhs'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="how_people_pay">
+					<a href="how_you_run_your_service/how_people_pay">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
@@ -261,7 +252,7 @@
 					{{ data['own-money'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="how_people_pay">
+					<a href="how_you_run_your_service/how_people_pay">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
@@ -274,7 +265,7 @@
 					{{ data['la-funded'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="how_people_pay">
+					<a href="how_you_run_your_service/how_people_pay">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
@@ -287,7 +278,7 @@
 					{{ data['la-top-up'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="how_people_pay">
+					<a href="how_you_run_your_service/how_people_pay">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
@@ -300,7 +291,7 @@
 					{{ data['joint-funded'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="how_people_pay">
+					<a href="how_you_run_your_service/how_people_pay">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
@@ -324,7 +315,7 @@
 					{{ data['pass-twelve-month'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="death_and_serious_incident">
+					<a href="how_you_run_your_service/death_and_serious_incident">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
@@ -338,7 +329,7 @@
 					{{ data['told-them'] }}   
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="death_and_serious_incident">
+					<a href="how_you_run_your_service/death_and_serious_incident">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
@@ -351,7 +342,7 @@
 					{{ data['write-to-them'] }}
 				</dd>
 				<dd class="app-check-your-answers__change">
-					<a href="death_and_serious_incident">
+					<a href="how_you_run_your_service/death_and_serious_incident">
 					Change<span class="govuk-visually-hidden"> number of people</span>
 					</a>
 				</dd>
