@@ -28,3 +28,8 @@ gulp.task('sass-documentation', function () {
   .pipe(sourcemaps.write())
   .pipe(gulp.dest(config.paths.public + '/stylesheets/'))
 })
+
+gulp.task('copy-custom-css', function () {
+  return gulp.src(config.paths.assets + 'css/*.css')
+  .pipe(gulp.dest(config.paths.public + '/stylesheets/'))
+})

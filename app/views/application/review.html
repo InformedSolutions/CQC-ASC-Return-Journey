@@ -1,0 +1,368 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="form-section-title">Millennium House</div>
+		<br>
+		<h1 class="govuk-heading-xl">
+			Check your answers before sending your application
+		</h1>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-l">
+			People that use your service
+        </h2>
+        <h2 class="govuk-heading-m">
+            Number of people
+        </h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people do you care for as part of a regulated activity?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['peopleNumber'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="number_of_people">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+            </div>
+            <br>
+            <h2 class="govuk-heading-m">
+                    Restriction and deprivation
+            </h2>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people are subject to a DoLS authorisation?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['dols'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="restriction_and_deprivation">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
+        <br>
+        
+                <!-- only add a heading for a list if there is more than one list -->
+				<h2 class="govuk-heading-l">
+						Your staff
+					</h2>
+					<h2 class="govuk-heading-m">
+						Staff numbers
+					</h2>
+                    <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+                    <!--   * `app-check-your-answers--short` for short questions -->
+                    <!--   * `app-check-your-answers__questions-long` for long questions -->
+                    <!--   * none for single group of q&a -->
+                    <dl class="app-check-your-answers app-check-your-answers--short">
+                        <div class="app-check-your-answers__contents">
+                            <dt class="app-check-your-answers__question">
+                                How many people does your service employ?
+                            </dt>
+                            <dd class="app-check-your-answers__answer">
+                                {{ data['service-employ'] }}
+                            </dd>
+                            <dd class="app-check-your-answers__change">
+                                <a href="staff_numbers">
+                                    Change<span class="govuk-visually-hidden"> number of people</span>
+                                </a>
+                            </dd>
+                        </div>
+            
+                        <div class="app-check-your-answers__contents">
+                            <dt class="app-check-your-answers__question">
+                                How many full time equivalent posts do you employ?
+                            </dt>
+                            <dd class="app-check-your-answers__answer">
+                                {{ data['post-employ'] }}
+                            </dd>
+                            <dd class="app-check-your-answers__change">
+                                <a href="staff_numbers">
+                                    Change<span class="govuk-visually-hidden"> DoLS</span>
+                                </a>
+                            </dd>
+                        </div>
+            
+                        <div class="app-check-your-answers__contents">
+                            <dt class="app-check-your-answers__question">
+                                How many of your staff give care as part of a regulated activity?
+                            </dt>
+                            <dd class="app-check-your-answers__answer">
+                                {{ data['staff-reg-activity'] }}
+                            </dd>
+                            <dd class="app-check-your-answers__change">
+                                <a href="staff_numbers">
+                                    Change<span class="govuk-visually-hidden"> DoLS</span>
+                                </a>
+                            </dd>
+                        </div>
+            
+                        <div class="app-check-your-answers__contents">
+                            <dt class="app-check-your-answers__question">
+                                How many of your staff are registered nurses?
+                            </dt>
+                            <dd class="app-check-your-answers__answer">
+                                {{ data['reg-nurse'] }}
+                            </dd>
+                            <dd class="app-check-your-answers__change">
+                                <a href="staff_numbers">
+                                    Change<span class="govuk-visually-hidden"> DoLS</span>
+                                </a>
+                            </dd>
+                        </div>
+            
+                        <div class="app-check-your-answers__contents">
+                            <dt class="app-check-your-answers__question">
+                                How many are volunteers?
+                            </dt>
+                            <dd class="app-check-your-answers__answer">
+                                {{ data['volunteer'] }}
+                            </dd>
+                            <dd class="app-check-your-answers__change">
+                                <a href="staff_numbers">
+                                    Change<span class="govuk-visually-hidden"> DoLS</span>
+                                </a>
+                            </dd>
+                        </div>
+            
+                        <div class="app-check-your-answers__contents">
+                            <dt class="app-check-your-answers__question">
+                                How many students are on placement with your service?
+                            </dt>
+                            <dd class="app-check-your-answers__answer">
+                                {{ data['placement-student'] }}
+                            </dd>
+                            <dd class="app-check-your-answers__change">
+                                <a href="staff_numbers">
+                                    Change<span class="govuk-visually-hidden"> DoLS</span>
+                                </a>
+                            </dd>
+                        </div>
+            
+                        <div class="app-check-your-answers__contents">
+                            <dt class="app-check-your-answers__question">
+                                How many apprentices do you have?
+                            </dt>
+                            <dd class="app-check-your-answers__answer">
+                                {{ data['apprentice'] }}
+                            </dd>
+                            <dd class="app-check-your-answers__change">
+                                <a href="staff_numbers">
+                                    Change<span class="govuk-visually-hidden"> DoLS</span>
+                                </a>
+                            </dd>
+                        </div>
+            
+                        <div class="app-check-your-answers__contents">
+                            <dt class="app-check-your-answers__question">
+                                How many of your staff started less than 12 weeks ago?
+                            </dt>
+                            <dd class="app-check-your-answers__answer">
+                                {{ data['staff-less-than-12'] }}
+                            </dd>
+                            <dd class="app-check-your-answers__change">
+                                <a href="staff_numbers">
+                                    Change<span class="govuk-visually-hidden"> DoLS</span>
+                                </a>
+                            </dd>
+                        </div>
+            
+                        <div class="app-check-your-answers__contents">
+                            <dt class="app-check-your-answers__question">
+                                How many staff vacancies do you have?
+                            </dt>
+                            <dd class="app-check-your-answers__answer">
+                                {{ data['staff-vacancy'] }}
+                            </dd>
+                            <dd class="app-check-your-answers__change">
+                                <a href="staff_numbers">
+                                    Change<span class="govuk-visually-hidden"> DoLS</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+		<br>
+		<h1 class="govuk-heading-l">
+			How you run your service
+		</h1>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-m">
+			Capacity
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many beds do you have?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['how-many-beds'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="capacity">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
+		<br>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-m">
+			How people pay for their care
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many of the people who use your service fully fund their own care?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['fully-funded'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="how_people_pay">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many are fully funded by the NHS?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['fully-funded-nhs'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="how_people_pay">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many use their own money to top up NHS funding?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['own-money'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="how_people_pay">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many are fully funded by a local authority?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['la-funded'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="how_people_pay">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many use their own money to top up local authority funding?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['la-top-up'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="how_people_pay">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many are jointly funded by the NHS and a local authority?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['joint-funded'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="how_people_pay">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
+		<br>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-m">
+			Death and serious incidents
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Have you had to tell anyone about an incident?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['pass-twelve-month'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="death_and_serious_incident">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<!-- <div class="app-check-your-answers__contents <% if({{ data['pass-twelve-month'] }} === 'Yes') { %>govuk-form-group--error<% } %>"> -->
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Have you kept records of what you told them?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['told-them'] }}   
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="death_and_serious_incident">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Have you kept copies of what you sent them?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['write-to-them'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="death_and_serious_incident">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+	</div>
+</div>
+</dl>
+<p>
+	By submitting this information you are confirming that, to the best of your knowledge, the details you are providing are correct.
+</p>
+<a href="task_list?reviewService=true" class="govuk-button" role="button">Continue</a>
+</div>
+</div>
+{% endblock %}

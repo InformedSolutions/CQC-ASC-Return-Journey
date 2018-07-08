@@ -10,33 +10,48 @@
 					<ol class="app-task-list">
 						<li>
 							<h2 class="app-task-list__section">
-								<span class="app-task-list__section-number"></span>Task-list
+								<span class="app-task-list__section-number">1. </span> Prepare application
 							</h2>
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
 									<div class="app-task-list__task-name">
 										<a href="people_that_use_your_service/number_of_people">People that use your service</a>
 									</div>
-										{{ govukTag({
-											attributes: { id: "eligibility-completed" },
-											classes: "app-task-list__task-completed",
-											text: "Completed"
-										  }) }}
+									{% if peopleService %} {% include "../includes/complete.html" %}
+									{% else %}{% include "../includes/todo.html" %}{% endif %}
 								</li>
 								<li class="app-task-list__item">
 									<div class="app-task-list__task-name">
-										<a href="your_staff/staff_numbers">Staff numbers</a>
+										<a href="your_staff/staff_numbers">Your staff</a>
 									</div>
-										{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
-										}}
+									{% if staffService %} {% include "../includes/complete.html" %}
+									{% else %}{% include "../includes/todo.html" %}{% endif %}
 								</li>
 								<li class="app-task-list__item">
 									<div class="app-task-list__task-name">
 										<a href="how_you_run_your_service/capacity">How you run your service</a>
 									</div>
-									{{ govukTag({ attributes: { id: "eligibility-completed" }, classes: "app-task-list__task-completed", text: "Completed" })
-									}}
-									<p>{{detail}}</p>
+									{% if howService %} {% include "../includes/complete.html" %}
+									{% else %}{% include "../includes/todo.html" %}{% endif %}
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h2 class="app-task-list__section">
+								<span class="app-task-list__section-number">2. </span> Consent and submit
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+									<div class="app-task-list__task-name">
+										<a href="review">Review</a>
+									</div>
+									{% if reviewService %} {% include "../includes/complete.html" %}
+									{% else %}{% include "../includes/todo.html" %}{% endif %}
+								</li>
+								<li class="app-task-list__item">
+									<div class="app-task-list__task-name">
+										<a href="consent_and_submit">Consent and submit</a>
+									</div>
 								</li>
 							</ul>
 						</li>

@@ -26,7 +26,7 @@
                     {{ data['peopleNumber'] }}
                 </dd>
                 <dd class="app-check-your-answers__change">
-                    <a href="#">
+                    <a href="number_of_people">
                         Change<span class="govuk-visually-hidden"> number of people</span>
                     </a>
                 </dd>
@@ -40,7 +40,7 @@
                     {{ data['dols'] }}
                 </dd>
                 <dd class="app-check-your-answers__change">
-                    <a href="#">
+                    <a href="restriction_and_deprivation">
                         Change<span class="govuk-visually-hidden"> DoLS</span>
                     </a>
                 </dd>
@@ -49,7 +49,7 @@
         <p>
             By submitting this information you are confirming that, to the best of your knowledge, the details you are providing are correct.
         </p>
-        <a href="/application/task_list?details=true" class="govuk-button" role="button">Confirm and continue</a>
+        <a href="../task_list?peopleService=true" class="govuk-button">Confirm and continue</a>
     </div>
 </div>
 {% endblock %}

@@ -24,6 +24,7 @@
 
 {% block head %}
   {% include "includes/head.html" %}
+
 {% endblock %}
 
 {% block main %}
@@ -31,7 +32,7 @@
 {% endblock %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+
 {% endblock %}
 {% block header %}
   {# Set serviceName in config.js. #}
@@ -40,9 +41,9 @@
   </div>
   {{ govukHeader({
     "homepageUrl": "/", 
-    "serviceName": serviceName,
     "serviceUrl": "/",
-    "containerClasses": "govuk-width-container"
+    "serviceName": "Return Journey",
+    "containerClasses": "govuk-width-container header"
   }) }}
 {% endblock %}
 

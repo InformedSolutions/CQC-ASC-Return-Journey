@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="form-section-title">Millennium House</div>
+            <br>
+            <h1 class="govuk-heading-xl">
+                Declaration
+            </h1>
+            <div class="govuk-form-group">
+            <label class="govuk-label govuk-checkboxes__label">By sending this you agree that:
+                <ul>
+                    <li>the information you have given is complete and correct as far as you know</li>
+                    <li>you will tell us if any of the information you have given changes</li>
+                </ul>
+            </label>
+            <br>
+            <div class="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" type="checkbox" id="declare" name="declare" value={{ data['declare'] }}>
+                <label for="declare" class="govuk-label govuk-checkboxes__label">I agree with both statements</label>
+            </div>
+        </div>
+    </div>
+    <a href="confirmation" class="govuk-button" role="button">Confirm and continue</a>
+    </div>
+</div>
+
+{% endblock %}
