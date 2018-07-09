@@ -15,11 +15,16 @@ router.get('/application/task_list', function (req, res) {
   req.session.howService = req.session.howService || req.query['howService'] || false;
   req.session.reviewService = req.session.reviewService || req.query['reviewService'] || false;
 
+  var showReview = false;
+
+  if (req.session.peopleService && req.session.staffNumbers && req.session.howService) showReview=true;
+
   res.render('application/task_list', {
     peopleService: req.session.peopleService,
     staffNumbers: req.session.staffNumbers,
     howService: req.session.howService,
-    reviewService: req.session.reviewService
+    reviewService: req.session.reviewService,
+    showReview: showReview
     });
 });
 
@@ -27,10 +32,17 @@ router.get('/application/task_list', function (req, res) {
 
 router.post('/application/how_you_run_your_service/check_your_answers', function (req, res) {
   // Complete tag
+  if (req.session.data['pass-twelve-month'] == "Yes"){
+    req.session.divShow = true;
+  } else {
+    req.session.divShow = false;
+  }
+
 
   res.render('application/how_you_run_your_service/check_your_answers', {
-    optional: true
-    });
+    optional: true,
+    divShow: req.session.divShow
+  });
 });
 
 module.exports = router
