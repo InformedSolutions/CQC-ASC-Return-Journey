@@ -15,11 +15,16 @@ router.get('/application/task_list', function (req, res) {
   req.session.howService = req.session.howService || req.query['howService'] || false;
   req.session.reviewService = req.session.reviewService || req.query['reviewService'] || false;
 
+  var showReview = false;
+
+  if (req.session.peopleService && req.session.staffNumbers && req.session.howService) showReview=true;
+
   res.render('application/task_list', {
     peopleService: req.session.peopleService,
     staffNumbers: req.session.staffNumbers,
     howService: req.session.howService,
-    reviewService: req.session.reviewService
+    reviewService: req.session.reviewService,
+    showReview: showReview
     });
 });
 
