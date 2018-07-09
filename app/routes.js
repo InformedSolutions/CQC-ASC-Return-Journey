@@ -27,10 +27,17 @@ router.get('/application/task_list', function (req, res) {
 
 router.post('/application/how_you_run_your_service/check_your_answers', function (req, res) {
   // Complete tag
+  if (req.session.data['pass-twelve-month'] == "Yes"){
+    req.session.divShow = true;
+  } else {
+    req.session.divShow = false;
+  }
+
 
   res.render('application/how_you_run_your_service/check_your_answers', {
-    optional: true
-    });
+    optional: true,
+    divShow: req.session.divShow
+  });
 });
 
 module.exports = router
