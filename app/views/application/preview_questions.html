@@ -1,0 +1,188 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="form-section-title">Millennium House</div>
+		<br>
+		<h1 class="govuk-heading-xl">
+			Preview a list of all the questions
+		</h1>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-l">
+			People that use your service
+		</h2>
+		<h2 class="govuk-heading-m">
+			Number of people
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people do you care for as part of a regulated activity?
+				</dt>
+			</div>
+			<br>
+			<h2 class="govuk-heading-m">
+				Restriction and deprivation
+			</h2>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people are subject to a DoLS authorisation?
+				</dt>
+			</div>
+		</dl>
+		<br>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-l">
+			Your staff
+		</h2>
+		<h2 class="govuk-heading-m">
+			Staff numbers
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people does your service employ?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many full time equivalent posts do you employ?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many of your staff give care as part of a regulated activity?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many of your staff are registered nurses?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many are volunteers?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many students are on placement with your service?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many apprentices do you have?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many of your staff started less than 12 weeks ago?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many staff vacancies do you have?
+				</dt>
+			</div>
+		</dl>
+		<br>
+		<h1 class="govuk-heading-l">
+			How you run your service
+		</h1>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-m">
+			Capacity
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many beds do you have?
+				</dt>
+			</div>
+		</dl>
+		<br>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-m">
+			How people pay for their care
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many of the people who use your service fully fund their own care?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many are fully funded by the NHS?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many use their own money to top up NHS funding?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many are fully funded by a local authority?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many use their own money to top up local authority funding?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many are jointly funded by the NHS and a local authority?
+				</dt>
+			</div>
+		</dl>
+		<br>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-m">
+			Death and serious incidents
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Have you had to tell anyone about an incident?
+				</dt>
+			</div>
+			<!-- <div class="app-check-your-answers__contents <% if({{ data['pass-twelve-month'] }} === 'Yes') { %>govuk-form-group--error<% } %>"> -->
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Have you kept records of what you told them?
+				</dt>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Have you kept copies of what you sent them?
+				</dt>
+			</div>
+	</div>
+</div>
+</dl>
+<a href="task_list" class="govuk-button" role="button">Continue</a>
+</div>
+</div>
+{% endblock %}
