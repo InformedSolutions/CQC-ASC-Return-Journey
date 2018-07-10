@@ -1,5 +1,10 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
-
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/your_staff/staff_numbers",
+text: "Back"
+}) }}
+{% endblock %}
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
