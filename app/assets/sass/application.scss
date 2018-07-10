@@ -120,3 +120,27 @@ details .arrow {
   margin-right: .35em;
   font-style: normal;
 }
+
+.app-task-list__section-inactive {
+  display: table;
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 20px;
+  padding-bottom: 5px;
+  color: #6F777B;
+}
+
+.app-task-list__task-name-inactive {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 20px;
+  width: 15em;
+  float: left;
+  color: #6F777B;
+}
