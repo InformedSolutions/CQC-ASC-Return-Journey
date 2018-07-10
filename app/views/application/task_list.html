@@ -7,11 +7,11 @@
 				<br>
 				<div class="location_name_secondary_element">Update Millennium House</div>
 				<div class="container">
-					<a href="#" class="govuk-button">Preview the questions</a>
+					<a href="preview_questions" class="govuk-button">Preview the questions</a>
 					<ol class="app-task-list">
 						<li>
 							<h2 class="app-task-list__section">
-								<span class="app-task-list__section-number">1. </spanUpdate > Update information
+								<span class="app-task-list__section-number">1. </span> Update information
 							</h2>
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
@@ -46,6 +46,21 @@
 								<li class="app-task-list__item">
 									<div class="app-task-list__task-name">
 										<a href="review">Review and submit</a>
+									</div>
+									{% if reviewService %} {% include "../includes/complete.html" %}
+									{% else %}{% include "../includes/todo.html" %}{% endif %}
+								</li>
+							</ul>
+						</li>
+						{% else %}
+						<li>
+							<h2 class="app-task-list__section-inactive">
+								<span class="app-task-list__section-number">2. </span> Review and submit
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+									<div class="app-task-list__task-name-inactive">
+										<span>Review and submit</span>
 									</div>
 									{% if reviewService %} {% include "../includes/complete.html" %}
 									{% else %}{% include "../includes/todo.html" %}{% endif %}
