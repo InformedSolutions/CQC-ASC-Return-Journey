@@ -25,6 +25,21 @@ text: "Back"
         <dl class="app-check-your-answers app-check-your-answers--short">
             <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
+                    Does your service employ anybody?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['service-employ-check'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> number of people</span>
+                    </a>
+                </dd>
+            </div>
+
+            {% if serviceEmployShow %}
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
                     How many people does your service employ?
                 </dt>
                 <dd class="app-check-your-answers__answer">
@@ -36,13 +51,14 @@ text: "Back"
                     </a>
                 </dd>
             </div>
+            {% endif %}
 
             <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
-                    How many full time equivalent posts do you employ?
+                    Did any of your staff start within the last 12 weeks?
                 </dt>
                 <dd class="app-check-your-answers__answer">
-                    {{ data['post-employ'] }}
+                    {{ data['staff-less-than-12-check'] }}
                 </dd>
                 <dd class="app-check-your-answers__change">
                     <a href="staff_numbers">
@@ -51,76 +67,7 @@ text: "Back"
                 </dd>
             </div>
 
-            <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                    How many of your staff give care as part of a regulated activity?
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                    {{ data['staff-reg-activity'] }}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                    <a href="staff_numbers">
-                        Change<span class="govuk-visually-hidden"> DoLS</span>
-                    </a>
-                </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                    How many of your staff are registered nurses?
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                    {{ data['reg-nurse'] }}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                    <a href="staff_numbers">
-                        Change<span class="govuk-visually-hidden"> DoLS</span>
-                    </a>
-                </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                    How many are volunteers?
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                    {{ data['volunteer'] }}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                    <a href="staff_numbers">
-                        Change<span class="govuk-visually-hidden"> DoLS</span>
-                    </a>
-                </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                    How many students are on placement with your service?
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                    {{ data['placement-student'] }}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                    <a href="staff_numbers">
-                        Change<span class="govuk-visually-hidden"> DoLS</span>
-                    </a>
-                </dd>
-            </div>
-
-            <div class="app-check-your-answers__contents">
-                <dt class="app-check-your-answers__question">
-                    How many apprentices do you have?
-                </dt>
-                <dd class="app-check-your-answers__answer">
-                    {{ data['apprentice'] }}
-                </dd>
-                <dd class="app-check-your-answers__change">
-                    <a href="staff_numbers">
-                        Change<span class="govuk-visually-hidden"> DoLS</span>
-                    </a>
-                </dd>
-            </div>
-
+            {% if staffLessThan12Show %}
             <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
                     How many of your staff started less than 12 weeks ago?
@@ -134,7 +81,23 @@ text: "Back"
                     </a>
                 </dd>
             </div>
+            {% endif %}
 
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    Do you have any staff vacancies?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['staff-vacancy-check'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+
+            {% if staffVacancyShow %}
             <div class="app-check-your-answers__contents">
                 <dt class="app-check-your-answers__question">
                     How many staff vacancies do you have?
@@ -148,6 +111,187 @@ text: "Back"
                     </a>
                 </dd>
             </div>
+            {% endif %}
+
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    Do you employ any full time equivalent posts?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['post-employ-check'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+
+            {% if postEmployShow %}
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many full time equivalent posts do you employ?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['post-employ'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+            {% endif %}
+
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    Do any of your staff give care as part of a regulated activity?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['staff-reg-activity-check'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+
+            {% if staffRegActivityShow %}
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many of your staff give care as part of a regulated activity?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['staff-reg-activity'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+            {% endif %}
+
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    Are any of your staff registered nurses?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['reg-nurse-check'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+
+            {% if regNurseShow %}
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many of your staff are registered nurses?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['reg-nurse'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+            {% endif %}
+
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    Are any of your staff volunteers?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['volunteer-check'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+
+            {% if volunteerShow %}
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many are volunteers?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['volunteer'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+            {% endif %}
+
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    Are any of your staff placement students?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['placement-student-check'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+
+            {% if placementStudentShow %}
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many students are on placement with your service?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['placement-student'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+            {% endif %}
+
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    Are any of your staff apprentices?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['apprentice-check'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+
+            {% if apprenticeShow %}
+            <div class="app-check-your-answers__contents">
+                <dt class="app-check-your-answers__question">
+                    How many apprentices do you have?
+                </dt>
+                <dd class="app-check-your-answers__answer">
+                    {{ data['apprentice'] }}
+                </dd>
+                <dd class="app-check-your-answers__change">
+                    <a href="staff_numbers">
+                        Change<span class="govuk-visually-hidden"> DoLS</span>
+                    </a>
+                </dd>
+            </div>
+            {% endif %}
         </dl>
 
         <p>

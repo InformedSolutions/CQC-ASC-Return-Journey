@@ -45,4 +45,222 @@ router.post('/application/how_you_run_your_service/check_your_answers', function
   });
 });
 
+router.post('/application/your_staff/check_your_answers', function (req, res) {
+  // Complete tag
+  if (req.session.data['service-employ-check'] == "Yes"){
+    req.session.serviceEmployShow = true;
+  } else {
+    req.session.serviceEmployShow = false;
+  }
+
+  if (req.session.data['staff-less-than-12-check'] == "Yes"){
+    req.session.staffLessThan12Show = true;
+  } else {
+    req.session.staffLessThan12Show = false;
+  }
+
+  if (req.session.data['staff-vacancy-check'] == "Yes"){
+    req.session.staffVacancyShow = true;
+  } else {
+    req.session.staffVacancyShow = false;
+  }
+
+  if (req.session.data['post-employ-check'] == "Yes"){
+    req.session.postEmployShow = true;
+  } else {
+    req.session.postEmployShow = false;
+  }
+
+  if (req.session.data['staff-reg-activity-check'] == "Yes"){
+    req.session.staffRegActivityShow = true;
+  } else {
+    req.session.staffRegActivityShow = false;
+  }
+
+  if (req.session.data['reg-nurse-check'] == "Yes"){
+    req.session.regNurseShow = true;
+  } else {
+    req.session.regNurseShow = false;
+  }
+
+  if (req.session.data['volunteer-check'] == "Yes"){
+    req.session.volunteerShow = true;
+  } else {
+    req.session.volunteerShow = false;
+  }
+
+  if (req.session.data['placement-student-check'] == "Yes"){
+    req.session.placementStudentShow = true;
+  } else {
+    req.session.placementStudentShow = false;
+  }
+
+  if (req.session.data['apprentice-check'] == "Yes"){
+    req.session.apprenticeShow = true;
+  } else {
+    req.session.apprenticeShow = false;
+  }
+
+
+  res.render('application/your_staff/check_your_answers', {
+    optional: true,
+    serviceEmployShow: req.session.serviceEmployShow,
+    staffLessThan12Show: req.session.staffLessThan12Show,
+    staffVacancyShow: req.session.staffVacancyShow,
+    postEmployShow: req.session.postEmployShow,
+    staffRegActivityShow: req.session.staffRegActivityShow,
+    regNurseShow: req.session.regNurseShow,
+    volunteerShow: req.session.volunteerShow,
+    placementStudentShow: req.session.placementStudentShow,
+    apprenticeShow: req.session.apprenticeShow
+
+  });
+});
+
+router.get('/application/your_staff/check_your_answers', function (req, res) {
+  // Complete tag
+  if (req.session.data['service-employ-check'] == "Yes"){
+    req.session.serviceEmployShow = true;
+  } else {
+    req.session.serviceEmployShow = false;
+  }
+
+  if (req.session.data['staff-less-than-12-check'] == "Yes"){
+    req.session.staffLessThan12Show = true;
+  } else {
+    req.session.staffLessThan12Show = false;
+  }
+
+  if (req.session.data['staff-vacancy-check'] == "Yes"){
+    req.session.staffVacancyShow = true;
+  } else {
+    req.session.staffVacancyShow = false;
+  }
+
+  if (req.session.data['post-employ-check'] == "Yes"){
+    req.session.postEmployShow = true;
+  } else {
+    req.session.postEmployShow = false;
+  }
+
+  if (req.session.data['staff-reg-activity-check'] == "Yes"){
+    req.session.staffRegActivityShow = true;
+  } else {
+    req.session.staffRegActivityShow = false;
+  }
+
+  if (req.session.data['reg-nurse-check'] == "Yes"){
+    req.session.regNurseShow = true;
+  } else {
+    req.session.regNurseShow = false;
+  }
+
+  if (req.session.data['volunteer-check'] == "Yes"){
+    req.session.volunteerShow = true;
+  } else {
+    req.session.volunteerShow = false;
+  }
+
+  if (req.session.data['placement-student-check'] == "Yes"){
+    req.session.placementStudentShow = true;
+  } else {
+    req.session.placementStudentShow = false;
+  }
+
+  if (req.session.data['apprentice-check'] == "Yes"){
+    req.session.apprenticeShow = true;
+  } else {
+    req.session.apprenticeShow = false;
+  }
+
+
+  res.render('application/your_staff/check_your_answers', {
+    optional: true,
+    serviceEmployShow: req.session.serviceEmployShow,
+    staffLessThan12Show: req.session.staffLessThan12Show,
+    staffVacancyShow: req.session.staffVacancyShow,
+    postEmployShow: req.session.postEmployShow,
+    staffRegActivityShow: req.session.staffRegActivityShow,
+    regNurseShow: req.session.regNurseShow,
+    volunteerShow: req.session.volunteerShow,
+    placementStudentShow: req.session.placementStudentShow,
+    apprenticeShow: req.session.apprenticeShow
+
+  });
+});
+
+
+
+router.get('/application/review', function (req, res) {
+  // Complete tag
+  if (req.session.data['service-employ-check'] == "Yes"){
+    req.session.serviceEmployShow = true;
+  } else {
+    req.session.serviceEmployShow = false;
+  }
+
+  if (req.session.data['staff-less-than-12-check'] == "Yes"){
+    req.session.staffLessThan12Show = true;
+  } else {
+    req.session.staffLessThan12Show = false;
+  }
+
+  if (req.session.data['staff-vacancy-check'] == "Yes"){
+    req.session.staffVacancyShow = true;
+  } else {
+    req.session.staffVacancyShow = false;
+  }
+
+  if (req.session.data['post-employ-check'] == "Yes"){
+    req.session.postEmployShow = true;
+  } else {
+    req.session.postEmployShow = false;
+  }
+
+  if (req.session.data['staff-reg-activity-check'] == "Yes"){
+    req.session.staffRegActivityShow = true;
+  } else {
+    req.session.staffRegActivityShow = false;
+  }
+
+  if (req.session.data['reg-nurse-check'] == "Yes"){
+    req.session.regNurseShow = true;
+  } else {
+    req.session.regNurseShow = false;
+  }
+
+  if (req.session.data['volunteer-check'] == "Yes"){
+    req.session.volunteerShow = true;
+  } else {
+    req.session.volunteerShow = false;
+  }
+
+  if (req.session.data['placement-student-check'] == "Yes"){
+    req.session.placementStudentShow = true;
+  } else {
+    req.session.placementStudentShow = false;
+  }
+
+  if (req.session.data['apprentice-check'] == "Yes"){
+    req.session.apprenticeShow = true;
+  } else {
+    req.session.apprenticeShow = false;
+  }
+
+
+  res.render('application/review', {
+    optional: true,
+    serviceEmployShow: req.session.serviceEmployShow,
+    staffLessThan12Show: req.session.staffLessThan12Show,
+    staffVacancyShow: req.session.staffVacancyShow,
+    postEmployShow: req.session.postEmployShow,
+    staffRegActivityShow: req.session.staffRegActivityShow,
+    regNurseShow: req.session.regNurseShow,
+    volunteerShow: req.session.volunteerShow,
+    placementStudentShow: req.session.placementStudentShow,
+    apprenticeShow: req.session.apprenticeShow
+
+  });
+});
+
 module.exports = router

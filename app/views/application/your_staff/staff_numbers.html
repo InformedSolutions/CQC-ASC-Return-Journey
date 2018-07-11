@@ -14,91 +14,270 @@ text: "Back"
 					<div class="govuk-label--xl">Millennium House</div>
 					<div class="col-md-10 gds_task_list">
 						<h2 class="govuk-label--l">Your staff</h2>
-						<p class="govuk-label--m">Staff numbers</p>
-						<p class="govuk-label--m"></p>
 						<div class="govuk-form-group">
-							<div class="govuk-form-group">
-								<label for="service-employ" class="govuk-label">How many people does your service employ?</label>
-								<label for="service-employ" class="guidance govuk-label">All staff, including temporary, pool and agency staff, students and volunteers. As well as care staff, include people who do things we do not regulate, like cooking or cleaning.</label>
-								<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
-								<input class="govuk-input govuk-input--width-10" type="text" id="service-employ" name="service-employ" value={{ data['service-employ'] }}>
-							</div>
-							<div class="govuk-form-group">
-								<label for="post-employ" class="govuk-label">How many full time equivalent posts do you employ?</label>
-								<div class="webform-element-more--link">
-									<details>
-										<summary><span class="summary">What is classified as full time?</span></summary>
-										<div class="panel panel-border-narrow">
-											<p>Use 37 hours a week as your basis for full time, even if your full time hours are different</p>
-											<p>How to calculate full time equivalent posts</p>
-											<p>Full time equivalent is a way of setting out the number of hours people work in a given period. It divides the total number of staff hours by the hours for one full time employee. To calculate it:</p>
-											<ul>
-												<li>add together the hours worked by all your staff in one week</li>
-												<li>divide the total by 37</li>
-											</ul>
-										</div>
-									</details>
-									<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a>
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<div class="govuk-label">
+									Does your service employ anybody?
 								</div>
-								<input class="govuk-input govuk-input--width-10" type="text" id="post-employ" name="post-employ" value={{ data['post-employ'] }}>
+							</legend>
+							<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="service-employ-yes" name="service-employ-check" type="radio" value="Yes" {{ checked('service-employ-check','Yes') }} data-aria-controls="conditional-service-employ">
+									<label class="govuk-label govuk-radios__label" for="service-employ-yes">
+										Yes
+									</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="service-employ-no" name="service-employ-check" type="radio" value="No" {{ checked('service-employ-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="service-employ-no">
+										No
+									</label>
+								</div>
+								<br>
+								<div class="govuk-form-group__conditional" id="conditional-service-employ">
+									<label for="service-employ" class="govuk-label">How many people does your service employ?</label>
+									<label for="service-employ" class="guidance govuk-label">All staff, including temporary, pool and agency staff, students and volunteers. As well as care staff, include people who do things we do not regulate, like cooking or cleaning.</label>
+									<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
+									<input class="govuk-input govuk-input--width-10" type="text" id="service-employ" name="service-employ" value={{ data['service-employ'] }}>
+								</div>
 							</div>
-							<div class="govuk-form-group">
-								<label for="staff-reg-activity" class="govuk-label">How many of your staff give care as part of a regulated activity?</label>
-								<div class="webform-element-more--link">
-									<details>
-										<summary><span class="summary">Who undertakes regular activities?</span></summary>
-										<div class="panel panel-border-narrow">
-											<p class="govuk-label">Which staff to include:</p>
-											<ul class="govuk-label">
-												<li >Give the number of people who provide care we regulate as part of their day to day job, for example care workers and nurses.</li>
-												<li >Do not include people who only do things we do not regulate, like cooking or cleaning.</li>
-												<li>Count permanent, temporary, pool and agency staff, students and volunteers.</li>
-												<li>Include staff on zero hour contracts.</li>
-												<li>Do not include vacancies.</li>
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<div class="govuk-label">
+									Did any of your staff start within the last 12 weeks?
+								</div>
+							</legend>
+							<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="staff-less-than-12-yes" name="staff-less-than-12-check" type="radio" value="Yes" {{ checked('staff-less-than-12-check','Yes') }} data-aria-controls="conditional-staff-less-than-12">
+									<label class="govuk-label govuk-radios__label" for="staff-less-than-12-yes">
+										Yes
+									</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="staff-less-than-12-no" name="staff-less-than-12-check" type="radio" value="No" {{ checked('staff-less-than-12-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="staff-less-than-12-no">
+										No
+									</label>
+								</div>
+								<br>
+								<div class="govuk-form-group__conditional" id="conditional-staff-less-than-12">
+									<label for="staff-less-than-12" class="govuk-label">How many of your staff started less than 12 weeks ago?</label>
+									<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
+									<input class="govuk-input govuk-input--width-10" type="text" id="staff-less-than-12" name="staff-less-than-12" value={{ data['staff-less-than-12'] }}>
+								</div>
+							</div>
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<div class="govuk-label">
+									Do you have any staff vacancies?
+								</div>
+							</legend>
+							<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="staff-vacancy-yes" name="staff-vacancy-check" type="radio" value="Yes" {{ checked('staff-vacancy-check','Yes') }} data-aria-controls="conditional-staff-vacancy">
+									<label class="govuk-label govuk-radios__label" for="staff-vacancy-yes">
+										Yes
+									</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="staff-vacancy-no" name="staff-vacancy-check" type="radio" value="No" {{ checked('staff-vacancy-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="staff-vacancy-no">
+										No
+									</label>
+								</div>
+								<br>
+								<div class="govuk-form-group__conditional" id="conditional-staff-vacancy">
+									<label for="staff-vacancy" class="govuk-label">How many staff vacancies do you have?</label>
+									<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
+									<input class="govuk-input govuk-input--width-10" type="text" id="staff-vacancy" name="staff-vacancy" value={{ data['staff-vacancy'] }}>
+								</div>
+							</div>
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<div class="govuk-label">
+									Do you employ any full time equivalent posts?
+								</div>
+							</legend>
 
-											</ul>
-										</div>
-									</details>
-									<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a>
+							<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="post-employ-yes" name="post-employ-check" type="radio" value="Yes" {{ checked('post-employ-check','Yes') }} data-aria-controls="conditional-post-employ">
+									<label class="govuk-label govuk-radios__label" for="post-employ-yes">
+										Yes
+									</label>
 								</div>
-								<input class="govuk-input govuk-input--width-10" type="text" id="staff-reg-activity" name="staff-reg-activity" value={{ data['staff-reg-activity'] }}>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="post-employ-no" name="post-employ-check" type="radio" value="No" {{ checked('post-employ-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="post-employ-no">
+										No
+									</label>
+								</div>
+								<br>
+								<div class="govuk-form-group__conditional" id="conditional-post-employ">
+									<label for="post-employ" class="govuk-label">How many full time equivalent posts do you employ?</label>
+									<div class="webform-element-more--link">
+										<details>
+											<summary><span class="summary">What is classified as full time?</span></summary>
+											<div class="panel panel-border-narrow">
+												<p>Use 37 hours a week as your basis for full time, even if your full time hours are different</p>
+												<p>How to calculate full time equivalent posts</p>
+												<p>Full time equivalent is a way of setting out the number of hours people work in a given period. It divides the total number of staff hours by the hours for one full time employee. To calculate it:</p>
+												<ul>
+													<li>add together the hours worked by all your staff in one week</li>
+													<li>divide the total by 37</li>
+												</ul>
+											</div>
+										</details>
+										<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a>
+									</div>
+									<input class="govuk-input govuk-input--width-10" type="text" id="post-employ" name="post-employ" value={{ data['post-employ'] }}>
+								</div>
 							</div>
-							<div class="govuk-form-group">
-								<label for="reg-nurse" class="govuk-label">How many of your staff are registered nurses?</label>
-								<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
-								<input class="govuk-input govuk-input--width-10" type="text" id="reg-nurse" name="reg-nurse" value={{ data['reg-nurse'] }}>
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<div class="govuk-label">
+									Do any of your staff give care as part of a regulated activity?
+								</div>
+							</legend>
+							<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="staff-reg-activity-yes" name="staff-reg-activity-check" type="radio" value="Yes" {{ checked('staff-reg-activity-check','Yes') }} data-aria-controls="conditional-staff-reg-activity">
+									<label class="govuk-label govuk-radios__label" for="staff-reg-activity-yes">
+										Yes
+									</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="staff-reg-activity-no" name="staff-reg-activity-check" type="radio" value="No" {{ checked('staff-reg-activity-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="staff-reg-activity-no">
+										No
+									</label>
+								</div>
+								<br>
+								<div class="govuk-form-group__conditional" id="conditional-staff-reg-activity">
+									<label for="staff-reg-activity" class="govuk-label">How many of your staff give care as part of a regulated activity?</label>
+									<div class="webform-element-more--link">
+										<details>
+											<summary><span class="summary">Who undertakes regular activities?</span></summary>
+											<div class="panel panel-border-narrow">
+												<p class="govuk-label">Which staff to include:</p>
+												<ul class="govuk-label">
+													<li >Give the number of people who provide care we regulate as part of their day to day job, for example care workers and nurses.</li>
+													<li >Do not include people who only do things we do not regulate, like cooking or cleaning.</li>
+													<li>Count permanent, temporary, pool and agency staff, students and volunteers.</li>
+													<li>Include staff on zero hour contracts.</li>
+													<li>Do not include vacancies.</li>
+
+												</ul>
+											</div>
+										</details>
+										<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a>
+									</div>
+									<input class="govuk-input govuk-input--width-10" type="text" id="staff-reg-activity" name="staff-reg-activity" value={{ data['staff-reg-activity'] }}>
+								</div>
 							</div>
-							<div class="govuk-form-group">
-								<label for="volunteer" class="govuk-label">How many are volunteers?</label>
-								<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
-								<input class="govuk-input govuk-input--width-10" type="text" id="volunteer" name="volunteer" value={{ data['volunteer'] }}>
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<div class="govuk-label">
+									Are any of your staff registered nurses?
+								</div>
+							</legend>
+							<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="reg-nurse-yes" name="reg-nurse-check" type="radio" value="Yes" {{ checked('reg-nurse-check','Yes') }} data-aria-controls="conditional-reg-nurse">
+									<label class="govuk-label govuk-radios__label" for="reg-nurse-yes">
+										Yes
+									</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="reg-nurse-no" name="reg-nurse-check" type="radio" value="No" {{ checked('reg-nurse-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="reg-nurse-no">
+										No
+									</label>
+								</div>
+								<br>
+								<div class="govuk-form-group__conditional" id="conditional-reg-nurse">
+									<label for="reg-nurse" class="govuk-label">How many of your staff are registered nurses?</label>
+									<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
+									<input class="govuk-input govuk-input--width-10" type="text" id="reg-nurse" name="reg-nurse" value={{ data['reg-nurse'] }}>
+								</div>
 							</div>
-							<div class="govuk-form-group">
-								<label for="placement-student" class="govuk-label">How many students are on placement with your service?</label>
-								<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
-								<input class="govuk-input govuk-input--width-10" type="text" id="placement-student" name="placement-student" value={{ data['placement-student'] }}>
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<div class="govuk-label">
+									Are any of your staff volunteers?
+								</div>
+							</legend>
+							<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="volunteer-yes" name="volunteer-check" type="radio" value="Yes" {{ checked('volunteer-check','Yes') }} data-aria-controls="conditional-volunteer">
+									<label class="govuk-label govuk-radios__label" for="volunteer-yes">
+										Yes
+									</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="volunteer-no" name="volunteer-check" type="radio" value="No" {{ checked('volunteer-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="volunteer-no">
+										No
+									</label>
+								</div>
+								<br>
+								<div class="govuk-form-group__conditional" id="conditional-volunteer">
+									<label for="volunteer" class="govuk-label">How many are volunteers?</label>
+									<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
+									<input class="govuk-input govuk-input--width-10" type="text" id="volunteer" name="volunteer" value={{ data['volunteer'] }}>
+								</div>
 							</div>
-							<div class="govuk-form-group">
-								<label for="apprentice" class="govuk-label">How many are apprentices?</label>
-								<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
-								<input class="govuk-input govuk-input--width-10" type="text" id="apprentice" name="apprentice" value={{ data['apprentice'] }}>
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<div class="govuk-label">
+									Are any of your staff placement students?
+								</div>
+							</legend>
+							<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="placement-student-yes" name="placement-student-check" type="radio" value="Yes" {{ checked('placement-student-check','Yes') }} data-aria-controls="conditional-placement-student">
+									<label class="govuk-label govuk-radios__label" for="placement-student-yes">
+										Yes
+									</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="placement-student-no" name="placement-student-check" type="radio" value="No" {{ checked('placement-student-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="placement-student-no">
+										No
+									</label>
+								</div>
+								<br>
+								<div class="govuk-form-group__conditional" id="conditional-placement-student">
+									<label for="placement-student" class="govuk-label">How many students are on placement with your service?</label>
+									<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
+									<input class="govuk-input govuk-input--width-10" type="text" id="placement-student" name="placement-student" value={{ data['placement-student'] }}>
+								</div>
 							</div>
-							<div class="govuk-form-group">
-								<label for="staff-less-than-12" class="govuk-label">How many of your staff started less than 12 weeks ago?</label>
-								<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
-								<input class="govuk-input govuk-input--width-10" type="text" id="staff-less-than-12" name="staff-less-than-12" value={{ data['staff-less-than-12'] }}>
-							</div>
-							<div class="govuk-form-group">
-								<label for="staff-vacancy" class="govuk-label">How many staff vacancies do you have?</label>
-								<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
-								<input class="govuk-input govuk-input--width-10" type="text" id="staff-vacancy" name="staff-vacancy" value={{ data['staff-vacancy'] }}>
+							<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+								<div class="govuk-label">
+									Are any of your staff apprentices?
+								</div>
+							</legend>
+							<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="apprentice-yes" name="apprentice-check" type="radio" value="Yes" {{ checked('apprentice-check','Yes') }} data-aria-controls="conditional-apprentice">
+									<label class="govuk-label govuk-radios__label" for="apprentice-yes">
+										Yes
+									</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="apprentice-no" name="apprentice-check" type="radio" value="No" {{ checked('apprentice-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="apprentice-no">
+										No
+									</label>
+								</div>
+								<br>
+								<div class="govuk-form-group__conditional" id="conditional-apprentice">
+									<label for="apprentice" class="govuk-label">How many are apprentices?</label>
+									<a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/suitable-staff-staff-cover" target="_blank">Read about the SAFE KLOE</a><br>
+									<input class="govuk-input govuk-input--width-10" type="text" id="apprentice" name="apprentice" value={{ data['apprentice'] }}>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="govuk-form-group">
 					<input class="govuk-button" type="submit" value="Save and continue"><br>
-					<a href="/application/task_list/">Return to overview</a>
+					<a href="/application/task_list">Return to overview</a>
 				</div>
 			</form>
 		</section>
