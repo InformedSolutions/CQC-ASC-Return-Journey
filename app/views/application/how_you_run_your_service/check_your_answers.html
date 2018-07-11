@@ -1,4 +1,10 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/how_you_run_your_service/death_and_serious_incident",
+text: "Back"
+}) }}
+{% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">

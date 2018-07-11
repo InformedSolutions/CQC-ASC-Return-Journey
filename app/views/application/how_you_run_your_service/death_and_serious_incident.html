@@ -1,4 +1,11 @@
-{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/how_you_run_your_service/how_people_pay",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
 <div class="govuk-label--xl">Millennium House</div>
 <div class="col-md-10 gds_task_list">
 <h2 class="govuk-label--l">How you run your service</h2>
@@ -69,9 +76,7 @@
 	</fieldset>
 	</div>
 	<div class="govuk-form-group">
-		<input class="govuk-button" type="submit" value="Save and continue">
-	</div>
-	<div>
+		<input class="govuk-button" type="submit" value="Save and continue"><br>
 		<a href="/application/task_list/">Return to overview</a>
 	</div>
 	</form>
