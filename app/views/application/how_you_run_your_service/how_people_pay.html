@@ -17,29 +17,31 @@ text: "Back"
 						<p class="govuk-label--m">How people pay for their care</p>
 						<div class="govuk-form-group">
 							<br>
+							<p class="govuk-label">How many people who use your service:</p>
+							<br>
 							<div class="govuk-form-group">
-								<label for="fully-funded" class="govuk-label">How many of the people who use your service fully fund their own care?</label>
-								<input class="form-control" type="text" id="fully-funded" name="fully-funded" value={{ data['fully-funded'] }}>
+								<label for="fully-funded" class="govuk-label">fully fund their own care?</label>
+								<input class="govuk-input govuk-input--width-10" type="text" id="fully-funded" name="fully-funded" value={{ data['fully-funded'] }}>
 							</div>
 							<div class="govuk-form-group">
-								<label for="fully-funded-nhs" class="govuk-label">How many are fully funded by the NHS?</label>
-								<input class="form-control" type="text" id="fully-funded-nhs" name="fully-funded-nhs" value={{ data['fully-funded-nhs'] }}>
+								<label for="fully-funded-nhs" class="govuk-label">are fully funded by the NHS?</label>
+								<input class="govuk-input govuk-input--width-10" type="text" id="fully-funded-nhs" name="fully-funded-nhs" value={{ data['fully-funded-nhs'] }}>
 							</div>
 							<div class="govuk-form-group">
-								<label for="own-money" class="govuk-label">How many use their own money to top up NHS funding?</label>
-								<input class="form-control" type="text" id="own-money" name="own-money" value={{ data['own-money'] }}>
+								<label for="own-money" class="govuk-label">use their own money to top up NHS funding?</label>
+								<input class="govuk-input govuk-input--width-10" type="text" id="own-money" name="own-money" value={{ data['own-money'] }}>
 							</div>
 							<div class="govuk-form-group">
-								<label for="la-funded" class="govuk-label">How many are fully funded by a local authority?</label>
-								<input class="form-control" type="text" id="la-funded" name="la-funded" value={{ data['la-funded'] }}>
+								<label for="la-funded" class="govuk-label">are fully funded by a local authority?</label>
+								<input class="govuk-input govuk-input--width-10" type="text" id="la-funded" name="la-funded" value={{ data['la-funded'] }}>
 							</div>
 							<div class="govuk-form-group">
-								<label for="la-top-up" class="govuk-label">How many use their own money to top up local authority funding?</label>
-								<input class="form-control" type="text" id="la-top-up" name="la-top-up" value={{ data['la-top-up'] }}>
+								<label for="la-top-up" class="govuk-label">use their own money to top up local authority funding?</label>
+								<input class="govuk-input govuk-input--width-10" type="text" id="la-top-up" name="la-top-up" value={{ data['la-top-up'] }}>
 							</div>
 							<div class="govuk-form-group">
-								<label for="joint-funded" class="govuk-label">How many are jointly funded by the NHS and a local authority?</label>
-								<input class="form-control" type="text" id="joint-funded" name="joint-funded" value={{ data['joint-funded'] }}>
+								<label for="joint-funded" class="govuk-label">are jointly funded by the NHS and a local authority?</label>
+								<input class="govuk-input govuk-input--width-10" type="text" id="joint-funded" name="joint-funded" value={{ data['joint-funded'] }}>
 							</div>
 						</div>
 					</div>
