@@ -1,0 +1,38 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/how_you_run_your_service/capacity",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="check_your_answers">
+				<div class="form-group js-form-wrapper form-wrapper" id="check_your_answers">
+					<div class="govuk-label--xl">Millennium House</div>
+					<div class="col-md-10 gds_task_list">
+						<h2 class="govuk-label--l">How you run your service</h2>
+						<p class="govuk-label--m">Effective, quality assurance and risk management</p>
+						<div class="govuk-form-group">
+							<div class="govuk-form-group">
+								<label for="#-risk-of-mal-deh" class="govuk-label">How many of the people who use your service are at risk of malnutrition or dehydration?</label>
+								<input class="govuk-input govuk-input--width-10" type="text" id="#-risk-of-mal-deh" name="#-risk-of-mal-deh" value={{ data['#-risk-of-mal-deh'] }}>
+							</div>
+							<div class="govuk-form-group">
+                                <label for="risk-of-mal-deh" class="govuk-label">How do you assess people to be at risk of malnutrition and dehydration?</label>
+                                <textarea class="govuk-textarea" rows="5" type="text" id="risk-of-mal-deh" name="risk-of-mal-deh" value={{ data['risk-of-mal-deh'] }}></textarea>
+                            </div>
+						</div>
+					</div>
+				</div>
+				<div class="govuk-form-group">
+					<input class="govuk-button" type="submit" value="Save and continue"><br>
+					<a href="/application/task_list/">Return to overview</a>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}
