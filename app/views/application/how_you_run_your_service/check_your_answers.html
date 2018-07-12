@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
 {% block beforeContent %}
 {{ govukBackLink({
-href: "/application/how_you_run_your_service/death_and_serious_incident",
+href: "/application/how_you_run_your_service/effective_quality_risk",
 text: "Back"
 }) }}
 {% endblock %}
@@ -173,7 +173,38 @@ text: "Back"
 				</dd>
 			</div>
             {% endif %} 
-            </dl>
+		</dl>
+		<h2 class="govuk-heading-m">
+			Effective quality assurance and risk management
+		</h2>
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many of the people who use your service are at risk of malnutrition or dehydration?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['#-risk-of-mal-deh'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="effective_quality_risk">
+						Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How do you assess people to be at risk of malnutrition and dehydration?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['risk-of-mal-deh'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="effective_quality_risk">
+						Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
 	</div>
 </div>
 </dl>
