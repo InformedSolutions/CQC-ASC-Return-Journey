@@ -144,3 +144,34 @@ details .arrow {
   float: left;
   color: #6F777B;
 }
+
+.govuk-form-group__conditional {
+  margin-bottom: 20px;
+  margin-left: 18px;
+  padding-left: 33px;
+  border-left: 4px solid #bfc1c3;
+}
+
+.govuk-form-group__conditional[aria-hidden="true"] {
+  display: none;
+}
+
+@media (min-width: 40.0625em) {
+  .govuk-form-group__conditional {
+    margin-bottom: 30px;
+  }
+}
+
+.govuk-form-group .govuk-form-group__conditional:last-of-type {
+  margin-bottom: 20px;
+}
+
+.govuk-form-group__conditional--error {
+  padding-left: 15px;
+  border-left: 5px solid #b10e1e;
+}
+
+.govuk-form-group__conditional--error .govuk-form-group {
+  padding: 0;
+  border: 0;
+}
