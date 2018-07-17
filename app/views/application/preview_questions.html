@@ -185,6 +185,29 @@ text: "Back"
 					Have you kept copies of what you sent them?
 				</dt>
 			</div>
+		</dl>
+		<br>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-m">
+				Effective, quality assurance and risk management
+			</h2>
+			<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+			<!--   * `app-check-your-answers--short` for short questions -->
+			<!--   * `app-check-your-answers__questions-long` for long questions -->
+			<!--   * none for single group of q&a -->
+			<dl class="app-check-your-answers app-check-your-answers--short">
+				<div class="app-check-your-answers__contents">
+					<dt class="app-check-your-answers__question">
+							How many of the people who use your service are at risk of malnutrition or dehydration?
+					</dt>
+				</div>
+				<!-- <div class="app-check-your-answers__contents <% if({{ data['pass-twelve-month'] }} === 'Yes') { %>govuk-form-group--error<% } %>"> -->
+				<div class="app-check-your-answers__contents">
+					<dt class="app-check-your-answers__question">
+							How do you assess people to be at risk of malnutrition and dehydration?
+					</dt>
+				</div>
+			</dl>
 	</div>
 </div>
 </dl>
