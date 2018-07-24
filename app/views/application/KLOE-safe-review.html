@@ -5,17 +5,11 @@
 		<div class="form-section-title">Millennium House</div>
 		<br>
 		<h1 class="govuk-heading-xl">
-			Check your answers before sending your application
+			Reflect on the quality of the service you provide
 		</h1>
 		<!-- only add a heading for a list if there is more than one list -->
 		<h2 class="govuk-heading-l">
-			How is your service is safe?
-		</h2>
-		<h2 class="govuk-heading-l">
-			People that use your service
-		</h2>
-		<h2 class="govuk-heading-m">
-			Number of people
+			How is your service safe?
 		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
@@ -35,10 +29,6 @@
 					</a>
 				</dd>
 			</div>
-			<br>
-			<h2 class="govuk-heading-m">
-				Restriction and deprivation
-			</h2>
 			<div class="app-check-your-answers__contents">
 				<dt class="app-check-your-answers__question">
 					How many people are subject to a DoLS authorisation?
@@ -53,14 +43,6 @@
 				</dd>
 			</div>
 		</dl>
-		<br>
-		<!-- only add a heading for a list if there is more than one list -->
-		<h2 class="govuk-heading-l">
-			Your staff
-		</h2>
-		<h2 class="govuk-heading-m">
-			Staff numbers
-		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
 		<!--   * `app-check-your-answers__questions-long` for long questions -->
@@ -336,14 +318,6 @@
 			</div>
 			{% endif %}
 		</dl>
-		<br>
-		<h1 class="govuk-heading-l">
-			How you run your service
-		</h1>
-		<!-- only add a heading for a list if there is more than one list -->
-		<h2 class="govuk-heading-m">
-			Capacity
-		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
 		<!--   * `app-check-your-answers__questions-long` for long questions -->
@@ -363,11 +337,6 @@
 				</dd>
 			</div>
 		</dl>
-		<br>
-		<!-- only add a heading for a list if there is more than one list -->
-		<h2 class="govuk-heading-m">
-			How people pay for their care
-		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
 		<!--   * `app-check-your-answers__questions-long` for long questions -->
@@ -452,11 +421,6 @@
 				</dd>
 			</div>
 		</dl>
-		<br>
-		<!-- only add a heading for a list if there is more than one list -->
-		<h2 class="govuk-heading-m">
-			Death and serious incidents
-		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
 		<!--   * `app-check-your-answers__questions-long` for long questions -->
@@ -503,43 +467,12 @@
 				</dd>
 			</div>
 		</dl>
-		<h2 class="govuk-heading-m">
-			Effective quality assurance and risk management
-		</h2>
-		<dl class="app-check-your-answers app-check-your-answers--short">
-			<div class="app-check-your-answers__contents">
-				<dt class="app-check-your-answers__question">
-					How many of the people who use your service are at risk of malnutrition or dehydration?
-				</dt>
-				<dd class="app-check-your-answers__answer">
-					{{ data['#-risk-of-mal-deh'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="effective_quality_risk">
-						Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
-			</div>
-			<div class="app-check-your-answers__contents">
-				<dt class="app-check-your-answers__question">
-					How do you assess people to be at risk of malnutrition and dehydration?
-				</dt>
-				<dd class="app-check-your-answers__answer">
-					{{ data['risk-of-mal-deh'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="effective_quality_risk">
-						Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
-			</div>
-		</dl>
 	</div>
 </div>
 <p>
 	By submitting this information you are confirming that, to the best of your knowledge, the details you are providing are correct.
 </p>
-<a href="consent_and_submit" class="govuk-button" role="button">Continue</a>
+<a href="KLOE-effective-review" class="govuk-button" role="button">Continue</a>
 </div>
 </div>
 {% endblock %}
