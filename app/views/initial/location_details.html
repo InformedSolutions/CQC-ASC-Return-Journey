@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <section class="col-sm-9">
+            <div class="govuk-label--l">Location details</div>
+            <form class="webform-submission-form webform-submission-add-form webform-submission-parent-form-form webform-submission-parent-form-add-form js-webform-details-toggle webform-details-toggle js-webform-disable-autosubmit">
+              <div class="govuk-form-group" id="edit-task-list">
+                  <label for="edit-name" class="govuk-label--s">Provider name</label>
+                  <label for="peopleNumber" class="govuk-label">UK Managed Healthcare</label>
+              </div>
+              <div class="govuk-form-group" id="edit-task-list">
+                <label for="edit-name" class="govuk-label--s">Location name</label>
+                <label for="peopleNumber" class="govuk-label">Millennium House</label>
+            </div>
+            <div class="govuk-form-group" id="edit-task-list">
+                <label for="edit-name" class="govuk-label--s">Location address</label>
+                <label for="peopleNumber" class="govuk-label">
+                  Ground Floor Telstar House <br/>
+                  Mead Avenue, Houndstone Business Park <br/>
+                  Yeovil <br/>
+                  Somerset <br/>
+                  BA22 8RT <br/>
+                </label>
+            </div>
+            <div class="govuk-form-group" id="edit-task-list">
+                <label for="edit-name" class="govuk-label--s">Where care is provided currently:</label>
+                <label for="peopleNumber" class="govuk-label">
+                <ul>
+                  <li>Community services - Nursing</li>
+                  <li>People's homes (for example, you are a domiciliary care or homecare agency)</li>
+                </ul>
+            </div>
+            <div class="form-actions form-group js-form-wrapper form-wrapper">
+              <a href="/initial/complete-full-form" class="button js-form-submit form-submit btn-primary btn icon-before">Continue</a>
+            </div>
+          </form>
+      </section>
+    </div>
+</div>
+
+{% endblock %}

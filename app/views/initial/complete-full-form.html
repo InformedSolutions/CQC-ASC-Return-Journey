@@ -1,10 +1,5 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
-{% block beforeContent %}
-{{ govukBackLink({
-href: "/application/previous-application/select-view",
-text: "Back"
-}) }}
-{% endblock %}
+
 {% block content %}
 <div class="container">
 	<div class="row">
@@ -22,35 +17,27 @@ text: "Back"
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
 									<a class="left" href="people_that_use_your_service/number_of_people">Number of people</a>
-									<p class="left">Last updated: 23rd April 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="people_that_use_your_service/number_of_people">Specialist care you provide</a>
-									<p class="left">Last updated: 10th January 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="people_that_use_your_service/number_of_people">Nutrition and hydration</a>
-									<p class="left">Last updated: 22nd October 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Restrictions and deprivation of liberty</a>
-									<p class="left">Last updated: 2nd January 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Mental capacity</a>
-									<p class="left">Last updated: 31st April 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Visiting arrangements</a>
-									<p class="left">Last updated: 15th October 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">End of life care</a>
-									<p class="left">Last updated: 30th December 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Equality, dignity and human rights</a>
-									<p class="left">Last updated: 1st November 2017</p>
 								</li>							
 							</ul>
 						</li>
@@ -61,15 +48,12 @@ text: "Back"
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
 									<a class="left" href="staff-check-your-answers">Staff numbers</a>
-									<p class="left">Last updated: 4th February 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Qualifications and skills</a>
-									<p class="left">Last updated: 9th July 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Training and supervision</a>
-									<p class="left">Last updated: 23rd June 2017</p>
 								</li>
 							</ul>
 						</li>
@@ -80,47 +64,36 @@ text: "Back"
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/capacity">Admissions</a>
-									<p class="left">Last updated: 19th March 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/capacity">Capacity</a>
-									<p class="left">Last updated: 19th March 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">Commissioning</a>
-									<p class="left">Last updated: 19th March 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">How people pay for their care</a>
-									<p class="left">Last updated: 19th March 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">How you identify risks</a>
-									<p class="left">Last updated: 19th March 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/death_and_serious_incident">Deaths and serious incidents</a>
-									<p class="left">Last updated: 15th August 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">Medicines management</a>
-									<p class="left">Last updated: 15th June 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">How you work with other services</a>
-									<p class="left">Last updated: 28th June 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">How you involve your local community</a>
-									<p class="left">Last updated: 14th January 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">Improvement, complaints and feedback</a>
-									<p class="left">Last updated: 20th October 2018</p>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">Records and personal information</a>
-									<p class="left">Last updated: 11th April 2018</p>
 								</li>
 							</ul>
 						</li>
@@ -131,23 +104,18 @@ text: "Back"
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
 									<a class="left" href="your_staff/staff_numbers">Safe</a>
-									<p class="left">Last updated: 27th January 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Effective</a>
-									<p class="left">Last updated: 6th February 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Caring</a>
-									<p class="left">Last updated: 6th February 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Responsive to people's needs</a>
-									<p class="left">Last updated: 6th February 2017</p>
 								</li>
 								<li class="app-task-list__item">
 									<a  class="left" href="people_that_use_your_service/restriction_and_deprivation">Well led</a>
-									<p class="left">Last updated: 6th February 2017</p>
 								</li>
 							</ul>
 					</li>

@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/dashboard/",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="col-sm-9">
+        <div class="govuk-label--l">Millennium House</div>
+        <p class="govuk-label">The full details for this location can be found below.</p>
+        <br>
+        <div class"govuk-form-group">
+            <p class="govuk-label">Access the full form</p>
+                <a href="view-full-form" class="button js-form-submit form-submit btn-primary btn icon-before">View</a>
+        </div>
+        <br>
+        <p class="govuk-label">Access the form aligned with the key lines of enquiry (KLOE) <a href="view-full-form-kloe">here</a></p> 
+    </div>
+</div>
+{% endblock %}
