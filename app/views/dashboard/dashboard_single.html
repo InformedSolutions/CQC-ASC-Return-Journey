@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="col-sm-9">
+        <h1 class="govuk-label--xl">Your provider information returns</h1>
+        <div class="govuk-label--l">Millennium House</div>
+        <p class="govuk-label">The PIR you need to update depends on when you sent your last one. You need to answer a full set of questions once a year and a smaller set every 3 months, called a quarterly return. </p>
+        <br>
+        <p class="govuk-label">Time needed:</p>
+        <ul class="govuk-label">
+            <li >Full PIRs take up to 2 weeks</li>
+            <li >Quarterly PIR usually take 1 day</li>
+        </ul>
+        <table class="govuk-table">
+            <br>
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">Deadline</th>
+                <th class="govuk-table__header" scope="col">Return type</th>
+                <th class="govuk-table__header" scope="col">Available actions</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__cell" scope="row">31 October 2018</th>
+                    <td class="govuk-table__cell">Quarterly</td>
+                    <td class="govuk-table__cell"><a href="../application/task_list" class="button js-form-submit form-submit btn-primary btn icon-before">Continue</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="govuk-label">View <a href="../application/previous-application/view-full-form.html">full details</a> for this location</p>       
+    </div>
+</div>
+{% endblock %}
