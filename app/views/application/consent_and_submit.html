@@ -14,21 +14,17 @@ text: "Back"
                 Declaration
             </h1>
             <div class="govuk-form-group">
-            <label class="govuk-label govuk-checkboxes__label">By sending this you agree that:
-                <ul>
-                    <li>the information you have given is complete and correct as far as you know</li>
-                    <li>you will tell us if any of the information you have given changes</li>
-                </ul>
+            <label class="govuk-label govuk-checkboxes__label">By sending this you agree that the information you have given is complete and correct as far as you know.
             </label>
             <br>
             <div class="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" type="checkbox" id="declare" name="declare" value={{ data['declare'] }}>
-                <label for="declare" class="govuk-label govuk-checkboxes__label">I agree with both statements</label>
+                <label for="declare" class="govuk-label govuk-checkboxes__label">I agree with the above statement</label>
             </div>
         </div>
     </div>
-    <a href="confirmation" class="govuk-button" role="button">Confirm and continue</a>
+    <a href="confirmation" class="govuk-button" role="button">Submit your update</a>
     </div>
 </div>
 {% endblock %}

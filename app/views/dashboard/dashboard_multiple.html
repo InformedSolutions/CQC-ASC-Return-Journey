@@ -17,6 +17,13 @@
             <li >The full version takes up to 2 weeks</li>
             <li >The short version usually takes 1 day</li>
         </ul>
+        <br>
+        <br>
+        <div class="govuk-form-group">
+        <label for="findLocation" class="govuk-label govuk-!-width-two-thirds">Find a specific location</label>
+        <input class="govuk-input govuk-!-width-two-thirds" type="text" id="findLocation" name="findLocation" value={{ data['findLocation'] }}>
+        <td class="govuk-table__cell"><a href="/dashboard/dashboard_multiple" class="button js-form-submit form-submit btn-primary btn icon-before">Search</a></td>
+        </div>
         <table class="govuk-table">
             <br>
             <thead class="govuk-table__head">
@@ -46,6 +53,18 @@
                     <td class="govuk-table__cell">Quarterly</td>
                     <td class="govuk-table__cell"><a href="../application/task_list" class="button js-form-submit form-submit btn-primary btn icon-before">Continue</a></td>
                 </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Roehorn Care Home</td>
+                    <th class="govuk-table__cell" scope="row">31 October 2018</th>
+                    <td class="govuk-table__cell">Quarterly</td>
+                    <td class="govuk-table__cell"><a href="../application/task_list" class="button js-form-submit form-submit btn-primary btn icon-before">Continue</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">The Triangle Care Home</td>
+                    <th class="govuk-table__cell" scope="row">31 October 2018</th>
+                    <td class="govuk-table__cell">Quarterly</td>
+                    <td class="govuk-table__cell"><a href="../application/task_list" class="button js-form-submit form-submit btn-primary btn icon-before">Continue</a></td>
+                </tr>                
             </tbody>
         </table>
         <p class="govuk-label">View <a href="../application/previous-application/view-full-form.html">full details</a> for this location</p>       

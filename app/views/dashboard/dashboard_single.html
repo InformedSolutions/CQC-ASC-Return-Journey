@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="col-sm-9">
+        <h1 class="govuk-label--xl">Your provider information returns</h1>
+        <div class="govuk-label--l">Millennium House</div>
+        <p class="govuk-label">We use the information you give us to monitor your service. It helps us answer the <a href="https://www.cqc.org.uk/guidance-providers/adult-social-care/key-lines-enquiry-adult-social-care-services" target="_blank">five key questions</a> we use to understand quality of care.</p>
+        <br>
+        <p class="govuk-label">This is your second quarterly return of 4 for the year 2018-19.</p>
+        <br>
+        <p class="govuk-label">It usually takes up to 1 day to complete.</p>
+        <br>
+        <p class="govuk-label" font-weight: bold><strong>You must submit this information by 31 October 2018.</strong></p><br>
+        <a href="../application/task_list" class="button js-form-submit form-submit btn-primary btn icon-before">Get started</a>
+        <br>
+        <br>
+        <p class="govuk-label">View the <a href="../application/previous-application/view-full-form.html">full details</a> for this location.</p>
+        <br>
+        <p class="govuk-label">There is a different process if you need to <a href="../application/previous-application/view-full-form.html">change the registration details</a> for this location.</p>
+    </div>
+</div>
+{% endblock %}

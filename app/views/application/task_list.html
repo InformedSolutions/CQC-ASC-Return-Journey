@@ -48,12 +48,12 @@ text: "Back"
 						{% if showReview %}
 						<li>
 							<h2 class="app-task-list__section">
-								<span class="app-task-list__section-number">2. </span> Review, reflect and submit
+								<span class="app-task-list__section-number">2. </span> Review and submit
 							</h2>
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
 									<div class="app-task-list__task-name">
-										<a href="review">Review, reflect and submit</a>
+										<a href="review">Review and submit</a>
 									</div>
 									{% if reviewService %} {% include "../includes/complete.html" %}
 									{% else %}{% include "../includes/todo.html" %}{% endif %}
@@ -63,12 +63,12 @@ text: "Back"
 						{% else %}
 						<li>
 							<h2 class="app-task-list__section-inactive">
-								<span class="app-task-list__section-number">2. </span> Review, reflect and submit
+								<span class="app-task-list__section-number">2. </span> Review and submit
 							</h2>
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
 									<div class="app-task-list__task-name-inactive">
-										<span>Review, reflect and submit</span>
+										<span>Review and submit</span>
 									</div>
 									{% if reviewService %} {% include "../includes/complete.html" %}
 									{% else %}{% include "../includes/todo.html" %}{% endif %}

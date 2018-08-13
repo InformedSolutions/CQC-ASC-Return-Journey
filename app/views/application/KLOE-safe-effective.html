@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
 {% block beforeContent %}
 {{ govukBackLink({
-href: "/application/task_list",
+href: "/application/review",
 text: "Back"
 }) }}
 {% endblock %}
@@ -11,14 +11,12 @@ text: "Back"
 		<div class="form-section-title">Millennium House</div>
 		<br>
 		<h1 class="govuk-heading-xl">
-			Check your answers
+			How we use your answers to monitor care quality
 		</h1>
+		<p>We use your information to help understand if your service is safe, effective, caring and responsive to people's need and well-led</p>
 		<!-- only add a heading for a list if there is more than one list -->
 		<h2 class="govuk-heading-l">
-			People that use your service
-		</h2>
-		<h2 class="govuk-heading-m">
-			Number of people
+			Safe: you are protected from abuse and avoidable harm
 		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
@@ -32,16 +30,7 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['peopleNumber'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="people_that_use_your_service/number_of_people">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
-			<br>
-			<h2 class="govuk-heading-m">
-				Restriction and deprivation
-			</h2>
 			<div class="app-check-your-answers__contents">
 				<dt class="app-check-your-answers__question">
 					How many people are subject to a DoLS authorisation?
@@ -49,21 +38,8 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['dols'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="people_that_use_your_service/restriction_and_deprivation">
-					Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 		</dl>
-		<br>
-		<!-- only add a heading for a list if there is more than one list -->
-		<h2 class="govuk-heading-l">
-			Your staff
-		</h2>
-		<h2 class="govuk-heading-m">
-			Staff numbers
-		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
 		<!--   * `app-check-your-answers__questions-long` for long questions -->
@@ -76,11 +52,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['service-employ-check'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
 
 			{% if serviceEmployShow %}
@@ -90,11 +61,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['service-employ'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
 				</dd>
 			</div>
 			{% endif %}
@@ -106,11 +72,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['staff-less-than-12-check'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 
 			{% if staffLessThan12Show %}
@@ -120,11 +81,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['staff-less-than-12'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
 				</dd>
 			</div>
 			{% endif %}
@@ -136,11 +92,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['staff-vacancy-check'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 
 			{% if staffVacancyShow %}
@@ -150,11 +101,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['staff-vacancy'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
 				</dd>
 			</div>
 			{% endif %}
@@ -166,11 +112,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['post-employ-check'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 
 			{% if postEmployShow %}
@@ -180,11 +121,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['post-employ'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
 				</dd>
 			</div>
 			{% endif %}
@@ -196,11 +132,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['staff-reg-activity-check'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 
 			{% if staffRegActivityShow %}
@@ -210,11 +141,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['staff-reg-activity'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
 				</dd>
 			</div>
 			{% endif %}
@@ -226,11 +152,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['reg-nurse-check'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 
 			{% if regNurseShow %}
@@ -240,11 +161,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['reg-nurse'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
 				</dd>
 			</div>
 			{% endif %}
@@ -256,11 +172,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['volunteer-check'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 
 			{% if volunteerShow %}
@@ -270,11 +181,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['volunteer'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
 				</dd>
 			</div>
 			{% endif %}
@@ -286,11 +192,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['placement-student-check'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 
 			{% if placementStudentShow %}
@@ -300,11 +201,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['placement-student'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
 				</dd>
 			</div>
 			{% endif %}
@@ -316,11 +212,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['apprentice-check'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 
 			{% if apprenticeShow %}
@@ -331,22 +222,9 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['apprentice'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="your_staff/staff_numbers">
-						Change<span class="govuk-visually-hidden"> DoLS</span>
-					</a>
-				</dd>
 			</div>
 			{% endif %}
 		</dl>
-		<br>
-		<h1 class="govuk-heading-l">
-			How you run your service
-		</h1>
-		<!-- only add a heading for a list if there is more than one list -->
-		<h2 class="govuk-heading-m">
-			Capacity
-		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
 		<!--   * `app-check-your-answers__questions-long` for long questions -->
@@ -359,18 +237,8 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['how-many-beds'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/capacity">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
 		</dl>
-		<br>
-		<!-- only add a heading for a list if there is more than one list -->
-		<h2 class="govuk-heading-m">
-			How people pay for their care
-		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
 		<!--   * `app-check-your-answers__questions-long` for long questions -->
@@ -383,11 +251,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['fully-funded'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/how_people_pay">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
 			<div class="app-check-your-answers__contents">
 				<dt class="app-check-your-answers__question">
@@ -395,11 +258,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['fully-funded-nhs'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/how_people_pay">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
 				</dd>
 			</div>
 			<div class="app-check-your-answers__contents">
@@ -409,11 +267,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['own-money'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/how_people_pay">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
 			<div class="app-check-your-answers__contents">
 				<dt class="app-check-your-answers__question">
@@ -421,11 +274,6 @@ text: "Back"
 				</dt>
 				<dd class="app-check-your-answers__answer">
 					{{ data['la-funded'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/how_people_pay">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
 				</dd>
 			</div>
 			<div class="app-check-your-answers__contents">
@@ -435,11 +283,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['la-top-up'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/how_people_pay">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
 			<div class="app-check-your-answers__contents">
 				<dt class="app-check-your-answers__question">
@@ -448,18 +291,8 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['joint-funded'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/how_people_pay">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
 		</dl>
-		<br>
-		<!-- only add a heading for a list if there is more than one list -->
-		<h2 class="govuk-heading-m">
-			Death and serious incidents
-		</h2>
 		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
 		<!--   * `app-check-your-answers--short` for short questions -->
 		<!--   * `app-check-your-answers__questions-long` for long questions -->
@@ -472,11 +305,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['pass-twelve-month'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/death_and_serious_incident">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
 			<!-- <div class="app-check-your-answers__contents <% if({{ data['pass-twelve-month'] }} === 'Yes') { %>govuk-form-group--error<% } %>"> -->
 			<div class="app-check-your-answers__contents">
@@ -486,11 +314,6 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['told-them'] }}   
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/death_and_serious_incident">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
 			<div class="app-check-your-answers__contents">
 				<dt class="app-check-your-answers__question">
@@ -499,50 +322,38 @@ text: "Back"
 				<dd class="app-check-your-answers__answer">
 					{{ data['write-to-them'] }}
 				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="how_you_run_your_service/death_and_serious_incident">
-					Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
 			</div>
 		</dl>
-		<h2 class="govuk-heading-m">
-			Effective quality assurance and risk management
+		<br>
+		<h2 class="govuk-heading-l">
+			Effective: your care, treatment and support achieves good outcomes, helps you to maintain quality of life and is based on the best available evidence.
 		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
 		<dl class="app-check-your-answers app-check-your-answers--short">
-			<div class="app-check-your-answers__contents">
-				<dt class="app-check-your-answers__question">
-					How many of the people who use your service are at risk of malnutrition or dehydration?
-				</dt>
-				<dd class="app-check-your-answers__answer">
-					{{ data['#-risk-of-mal-deh'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="effective_quality_risk">
-						Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
-			</div>
-			<div class="app-check-your-answers__contents">
-				<dt class="app-check-your-answers__question">
-					How do you assess people to be at risk of malnutrition and dehydration?
-				</dt>
-				<dd class="app-check-your-answers__answer">
-					{{ data['risk-of-mal-deh'] }}
-				</dd>
-				<dd class="app-check-your-answers__change">
-					<a href="effective_quality_risk">
-						Change<span class="govuk-visually-hidden"> number of people</span>
-					</a>
-				</dd>
-			</div>
-		</dl>
+				<div class="app-check-your-answers__contents">
+					<dt class="app-check-your-answers__question">
+						How many of the people who use your service are at risk of malnutrition or dehydration?
+					</dt>
+					<dd class="app-check-your-answers__answer">
+						{{ data['#-risk-of-mal-deh'] }}
+					</dd>
+				</div>
+				<div class="app-check-your-answers__contents">
+					<dt class="app-check-your-answers__question">
+						How do you assess people to be at risk of malnutrition and dehydration?
+					</dt>
+					<dd class="app-check-your-answers__answer">
+						{{ data['risk-of-mal-deh'] }}
+					</dd>
+				</div>
+			</dl>
+			<p>If you do need to make any changes then <a href="review">go back to the previous page</a>.</p>
 	</div>
 </div>
-<p>
-	By submitting this information you are confirming that, to the best of your knowledge, the details you are providing are correct.
-</p>
-<a href="KLOE-safe-review" class="govuk-button" role="button">Continue</a>
+<a href="consent_and_submit" class="govuk-button" role="button">Continue</a>
 </div>
 </div>
 {% endblock %}
