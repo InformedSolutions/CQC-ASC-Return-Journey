@@ -1,3 +1,32 @@
+<head>
+
+<script>
+$(document).ready(function(){
+        $('#dashboard-table').after('<div id="nav"></div>');
+        var rowsShown = 4;
+        var rowsTotal = $('#dashboard-table tbody tr').length;
+        var numPages = rowsTotal/rowsShown;
+        for(i = 0;i < numPages;i++) {
+            var pageNum = i + 1;
+            $('#nav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
+        }
+        $('#dashboard-table tbody tr').hide();
+        $('#dashboard-table tbody tr').slice(0, rowsShown).show();
+        $('#nav a:first').addClass('active');
+        $('#nav a').bind('click', function(){
+
+            $('#nav a').removeClass('active');
+            $(this).addClass('active');
+            var currPage = $(this).attr('rel');
+            var startItem = currPage * rowsShown;
+            var endItem = startItem + rowsShown;
+            $('#dashboard-table tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
+                    css('display','table-row').animate({opacity:1}, 300);
+        });
+    });
+</script>
+</head>
+
 {% extends "layout.html" %}
 
 {% block pageTitle %}
@@ -5,6 +34,31 @@
 {% endblock %}
 
 {% block content %}
+<script>
+    $(document).ready(function(){
+            $('#dashboard-table').after('<div id="nav"></div>');
+            var rowsShown = 5;
+            var rowsTotal = $('#dashboard-table tbody tr').length;
+            var numPages = rowsTotal/rowsShown;
+            for(i = 0;i < numPages;i++) {
+                var pageNum = i + 1;
+                $('#nav').append('<a style="padding-right: 10px" href="#" rel="'+i+'">'+pageNum+'</a> ');
+            }
+            $('#dashboard-table tbody tr').hide();
+            $('#dashboard-table tbody tr').slice(0, rowsShown).show();
+            $('#nav a:first').addClass('active');
+            $('#nav a').bind('click', function(){
+    
+                $('#nav a').removeClass('active');
+                $(this).addClass('active');
+                var currPage = $(this).attr('rel');
+                var startItem = currPage * rowsShown;
+                var endItem = startItem + rowsShown;
+                $('#dashboard-table tbody tr').css('opacity','0.0').hide().slice(startItem, endItem).
+                        css('display','table-row').animate({opacity:1}, 300);
+            });
+        });
+</script>
 <div class="govuk-grid-row">
     <div class="col-sm-9">
         <h1 class="govuk-label--xl">Your provider information returns</h1>
@@ -24,7 +78,7 @@
         <input class="govuk-input govuk-!-width-two-thirds" type="text" id="findLocation" name="findLocation" value={{ data['findLocation'] }}>
         <td class="govuk-table__cell"><a href="/dashboard/dashboard_multiple" class="button js-form-submit form-submit btn-primary btn icon-before">Search</a></td>
         </div>
-        <table class="govuk-table">
+        <table id="dashboard-table" class="govuk-table">
             <br>
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -64,7 +118,19 @@
                     <th class="govuk-table__cell" scope="row">31 October 2018</th>
                     <td class="govuk-table__cell">Quarterly</td>
                     <td class="govuk-table__cell"><a href="../application/task_list" class="button js-form-submit form-submit btn-primary btn icon-before">Continue</a></td>
-                </tr>                
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Five Oaks Care Home</td>
+                    <th class="govuk-table__cell" scope="row">31 October 2018</th>
+                    <td class="govuk-table__cell">Quarterly</td>
+                    <td class="govuk-table__cell"><a href="../application/task_list" class="button js-form-submit form-submit btn-primary btn icon-before">Continue</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">The Acorn Care Home</td>
+                    <th class="govuk-table__cell" scope="row">31 October 2018</th>
+                    <td class="govuk-table__cell">Quarterly</td>
+                    <td class="govuk-table__cell"><a href="../application/task_list" class="button js-form-submit form-submit btn-primary btn icon-before">Continue</a></td>
+                </tr>      
             </tbody>
         </table>  
     </div>
