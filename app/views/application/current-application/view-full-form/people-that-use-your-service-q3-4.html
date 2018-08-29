@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "people-that-use-your-service-q1-2",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="people-that-use-your-service-q5">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">People that use your service</div>
+					<div class="gds_task_list">
+						<h2 class="govuk-label--l">Number of People</h2>
+						<div class="govuk-form-group">
+							<label for="startNumber" class="govuk-label">How many people started using your service in the past 12 months?</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="startNumber" name="startNumber" value={{ data['startNumber'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="stoppedNumber" class="govuk-label">How many people stopped using your service in the past 12 months?</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="stoppedNumber" name="stoppedNumber" value={{ data['stoppedNumber'] }}>
+						</div>
+					</div>
+				</div>
+				<div class="govuk-form-group">
+					<input class="govuk-button" type="submit" value="Save and continue"><br>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

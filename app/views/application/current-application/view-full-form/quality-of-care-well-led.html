@@ -1,0 +1,79 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/current-application/view-full-form",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="/application/current-application/view-full-form">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Quality of Care</div>
+					<h2 class="govuk-label--l">Well-Led</h2>
+					<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+						<label class="govuk-label" for="wellledService">
+							How do you make sure your service is well-led? (500 words)
+						</label>
+						<details class="govuk-details">
+								<summary class="govuk-details__summary">
+								<span class="govuk-details__summary-text">
+									What to include in your answer
+								</span>
+								</summary>
+									<div class="govuk-details__text">
+										Use examples.<br><br>
+										Describe how you put policies into practice in real life and how you know your staff are following them.<br><br>
+										You could include how you:<br>
+										<ul><li>as a leader of your service, how you know it is providing high quality care</li>
+											<li>how your service's values are reflected in its day to day running - for example, they might be used in inductions or team meetings</li>
+											<li>what leadership or supervision there is at different levels in your service, for example at different times or on different shifts</li>
+											<li>what you do to promote equality or inclusion, for example when you recruit new staff</li></ul>
+										Describe anything else you do that shows you run a safe service. Include anything you feel is original or exceptional<br><br>
+											
+										Write up to 500 words.
+									</div>
+							</details>
+							<textarea class="govuk-textarea" id="wellledService" name="wellledService" rows="5" aria-describedby="wellledService-hint"></textarea>
+						<label class="govuk-label" for="improvements">
+							Give examples of how you have improved leadership, management and governance in your service. (500 words)
+						</label>
+							<label for="localauthority" class="guidance govuk-label">Only include things you have done since your last inspection or since you last filled in a PIR, whichever is more recent. Explain how they have made a difference to people who use your service.</label>
+							<textarea class="govuk-textarea" id="improvements" name="improvements" rows="5" aria-describedby="improvements-hint"></textarea>
+						<label class="govuk-label" for="improvementsPlan">
+							How are you planning to improve leadership, management and governance in your service over the next 12 months? (500 words)
+						</label>
+						<details class="govuk-details">
+								<summary class="govuk-details__summary">
+								<span class="govuk-details__summary-text">
+									What to include in your answer
+								</span>
+								</summary>
+									<div class="govuk-details__text">
+										Use examples. Tell us:<br>
+										<ul><li>what you are going to do
+											<li>who will do it
+											<li>when will it be completed
+											<li>what difference it will make for people who use your service</li></ul>	
+										Write up to 500 words.
+									</div>
+							</details>
+							<textarea class="govuk-textarea" id="improvementsPlan" name="improvementsPlan" rows="5" aria-describedby="improvementsPlan-hint"></textarea>
+						<div class="govuk-form-group">
+							<input class="govuk-button" type="submit" value="Save and continue"><br>
+						</div>
+					</fieldset>
+					</div>
+					</div>
+				</div>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

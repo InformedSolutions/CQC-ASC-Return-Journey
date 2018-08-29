@@ -1,0 +1,85 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/current-application/view-full-form",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="/application/current-application/view-full-form">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Qualifications and Skills</div>
+					<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+						<div class="govuk-label">
+						Do your staff and the people who use your service share a first language that is not English?
+						</div>
+						<div class="govuk-radios" data-module="radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="english-language-yes" name="english-language-check" type="radio" value="Yes" {{ checked('english-language-check','Yes') }} data-aria-controls="conditional-english-language">
+							<label class="govuk-label govuk-radios__label" for="english-language-yes">
+								Yes
+							</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="english-language-no" name="english-language-check" type="radio" value="No" {{ checked('english-language-check','No') }}>
+							<label class="govuk-label govuk-radios__label" for="english-language-no">
+								No
+							</label>
+						</div>
+						<br>
+						<div class="govuk-form-group__conditional" id="conditional-english-language">
+							<label for="english-language" class="govuk-label">What language do they share?</label>
+							<label for="english-language" class="guidance govuk-label">You can enter more than one</label>
+							<input class="govuk-input" type="text" id="english-language" name="english-language" value={{ data['english-language'] }}>
+						</div>
+
+						<div class="govuk-form-group">
+								<label for="careCertificate" class="govuk-label">How many of your Shared Lives carers have completed the Care Certificate?</label>
+								<input class="govuk-input govuk-input--width-10" type="number" id="careCertificate" name="careCertificate" value={{ data['careCertificate'] }}>
+							</div>
+
+						<div class="govuk-form-group">
+								<label for="Level2Qualification" class="govuk-label">How many of your permenant staff or Shared Lived carers have a Level 2 qualification or above?</label>
+								<label for="Level2Qualification" class="guidance govuk-label">For example, this could be an NVQ or Diploma in Health and Social Care</label>
+								<input class="govuk-input govuk-input--width-10" type="number" id="Level2Qualification" name="Level2Qualification" value={{ data['Level2Qualification'] }}>
+							</div>
+						<div class="govuk-form-group">
+								<label for="compulsorytraining" class="govuk-label">What compulsory training must your staff do so they have the right skills and knowledge to care for people?</label>
+								<details class="govuk-details">
+										<summary class="govuk-details__summary">
+										<span class="govuk-details__summary-text">
+											What to include in your answer
+										</span>
+										</summary>
+										<div class="govuk-details__text">
+											<ul>
+											<li>Explain which type of staff has to do each course</li>
+											<li>If your staff have to update their training, tell us how often</li>
+											</ul>
+											</div>
+									</details>
+								<textarea class="govuk-textarea" type="text" id="compulsorytraining" name="compulsorytraining" rows="5" value={{ data['compulsorytraining'] }}></textarea>
+							</div>
+							<div class="govuk-form-group">
+								<label for="differencesmade" class="govuk-label">What difference has this made to people's care and its outcomes?</label>
+								<textarea class="govuk-textarea" type="text" id="differencesmade" name="differencesmade" rows="5" value={{ data['differencesmade'] }}></textarea>
+							</div>
+							<div class="govuk-form-group">
+							<input class="govuk-button" type="submit" value="Save and continue"><br>
+						</fieldset>
+					  </div>
+					</div>
+					</div>
+				</div>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

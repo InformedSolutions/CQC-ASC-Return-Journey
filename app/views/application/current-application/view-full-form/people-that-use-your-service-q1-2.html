@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
 {% block beforeContent %}
 {{ govukBackLink({
-href: "/application/task_list",
+href: "/application/current-application/view-full-form.html",
 text: "Back"
 }) }}
 {% endblock %}
@@ -9,26 +9,25 @@ text: "Back"
 <div class="container">
 	<div class="row">
 		<section class="col-sm-9">
-			<form class="form" method="post" action="restriction_and_deprivation">
+			<form class="form" method="post" action="people-that-use-your-service-q3-4">
 				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
-					<div class="govuk-label--xl">How you run your service</div>
+					<div class="govuk-label--xl">People that use your service</div>
 					<div class="gds_task_list">
-						<h2 class="govuk-label--l">People</h2>
+						<h2 class="govuk-label--l">Number of People</h2>
 						<div class="govuk-form-group">
 							<label for="peopleNumber" class="govuk-label">How many people do you care for as part of a regulated activity?</label>
 							<label for="peopleNumber" class="guidance govuk-label">Give the total number of people using your service now</label>
-							<input class="govuk-input" type="text" id="peopleNumber" name="peopleNumber" value={{ data['peopleNumber'] }}>
+							<input class="govuk-input govuk-input--width-10" input type="number" id="peopleNumber" name="peopleNumber" value={{ data['peopleNumber'] }}>
 						</div>
 						<div class="govuk-form-group">
 							<label for="bedNumber" class="govuk-label">How many of these people are cared for in bed?</label>
 							<label for="bedNumber" class="guidance govuk-label">This means they stay in bed all of the time, for example because their mobility is very limited</label>
-							<input class="govuk-input" type="text" id="bedNumber" name="bedNumber" value={{ data['bedNumber'] }}>
+							<input class="govuk-input govuk-input--width-10" type="number" id="bedNumber" name="bedNumber" value={{ data['bedNumber'] }}>
 						</div>
 					</div>
 				</div>
 				<div class="govuk-form-group">
 					<input class="govuk-button" type="submit" value="Save and continue"><br>
-					<a href="/application/previous-application/view-full-form">Return to overview</a>
 				</div>
 			</form>
 		</section>
