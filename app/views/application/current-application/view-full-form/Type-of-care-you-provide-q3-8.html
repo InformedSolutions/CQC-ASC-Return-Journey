@@ -1,0 +1,80 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "Type-of-care-you-provide-q1-2",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="/application/current-application/view-full-form">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Types of care you provide</div>
+					<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+							<div class="govuk-label">
+									Does your service provide rehabilitation or reablement?
+									</div>
+									<div class="govuk-radios" data-module="radios">
+									<div class="govuk-radios__item">
+										<input class="govuk-radios__input" id="rehabilitation-and-reablement-yes" name="rehabilitation-and-reablement-check" type="radio" value="Yes" {{ checked('rehabilitation-and-reablement-check','Yes') }} data-aria-controls="conditional-rehabilitation-and-reablement">
+										<label class="govuk-label govuk-radios__label" for="rehabilitation-and-reablement-yes">
+											Yes
+										</label>
+									</div>
+									<div class="govuk-radios__item">
+										<input class="govuk-radios__input" id="rehabilitation-and-reablement-no" name="rehabilitation-and-reablement-check" type="radio" value="No" {{ checked('rehabilitation-and-reablement-check','No') }}>
+										<label class="govuk-label govuk-radios__label" for="rehabilitation-and-reablement-no">
+											No
+										</label>
+									</div>
+									<br>
+									<div class="govuk-form-group__conditional" id="conditional-rehabilitation-and-reablement">
+										<label for="rehabilitation-and-reablement" class="govuk-label">What rehabilitation or reablement services do you provide? (500 words)</label>
+										<textarea class="govuk-textarea" type="text" id="rehabilitation-and-reablement" rows="5" name="rehabilitation-and-reablement" aria-describedby="rehabilitation-and-reablement-hint" value={{ data['rehabilitation-and-reablement'] }}></textarea>
+									</div>	
+						<fieldset class="govuk-fieldset">
+						<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+									<div class="govuk-label">
+									Do you use technology to help with rehabilitation and reablement?
+									</div>
+									<div class="govuk-radios" data-module="radios">
+									<div class="govuk-radios__item">
+										<input class="govuk-radios__input" id="technology-yes" name="technology-check" type="radio" value="Yes" {{ checked('technology-check','Yes') }} data-aria-controls="conditional-technology">
+										<label class="govuk-label govuk-radios__label" for="technology-yes">
+											Yes
+										</label>
+									</div>
+									<div class="govuk-radios__item">
+										<input class="govuk-radios__input" id="technology-no" name="technology-check" type="radio" value="No" {{ checked('technology-check','No') }}>
+										<label class="govuk-label govuk-radios__label" for="technology-no">
+											No
+										</label>
+									</div>
+									<br>
+									<div class="govuk-form-group__conditional" id="conditional-technology">
+										<label for="technology" class="govuk-label">Give examples of the technology you use. (500 words)</label>
+										<textarea class="govuk-textarea" type="text" id="technology" rows="5" name="technology" aria-describedby="technology-hint" value={{ data['technology'] }}></textarea>
+									</div>
+								<div class="govuk-form-group">
+									<label class="govuk-label" for="technology-difference">
+										What difference has this technology made to the people who use your service? (500 words)
+									</label>
+									<textarea class="govuk-textarea" id="technology-difference" name="technology-difference" rows="5" aria-describedby="technology-difference-hint"></textarea>
+								</div>
+								<div class="govuk-form-group">
+									<input class="govuk-button" type="submit" value="Save and continue"><br>
+							</div>
+						</fieldset>
+					  </div>
+					</div>
+				</div>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

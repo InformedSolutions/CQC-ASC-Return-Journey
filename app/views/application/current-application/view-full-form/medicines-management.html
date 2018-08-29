@@ -1,0 +1,134 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "Type-of-care-you-provide-q1-2",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="/application/current-application/view-full-form">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">How you run your service</div>
+					<div class="gds_task_list">
+						<h2 class="govuk-label--l">Medicines Management</h2>
+						<div class="govuk-form-group">
+
+						<div class="govuk-label">
+						Do you administer medicines?
+						</div>
+						<div class="govuk-radios" data-module="radios">
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="medicinesAdminister-yes" name="medicinesAdminister-check" type="radio" value="Yes" {{ checked('medicinesAdminister-check','Yes') }} data-aria-controls="conditional-medicinesAdminister">
+							<label class="govuk-label govuk-radios__label" for="medicinesAdminister-yes">
+								Yes
+							</label>
+						</div>
+						<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="medicinesAdminister-no" name="medicinesAdminister-check" type="radio" value="No" {{ checked('medicinesAdminister-check','No') }}>
+							<label class="govuk-label govuk-radios__label" for="medicinesAdminister-no">
+								No
+							</label>
+						</div>
+						<br>
+						<div class="govuk-radios__conditional" id="conditional-medicinesAdminister">
+							<label for="tubeFeeding" class="govuk-label">Do you use tube feeding to administer medicines?</label>
+							<label for="fundowncare" class="guidance govuk-label">This is also called enteral feeding</label>
+							<div class="govuk-radios" data-module="radios">
+							<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="tubeFeeding-yes" name="tubeFeeding-check" type="radio" value="Yes" {{ checked('tubeFeeding-check','Yes') }} data-aria-controls="conditional-tubeFeeding">
+							<label class="govuk-label govuk-radios__label" for="tubeFeeding-yes">Yes</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="tubeFeeding-no" name="tubeFeeding-check" type="radio" value="No" {{ checked('tubeFeeding-check','No') }}>
+								<label class="govuk-label govuk-radios__label" for="tubeFeeding-no">No</label>
+								</div>
+							</div>
+							<br>
+							<label for="covertmedicines" class="govuk-label">Do you ever administer medicines covertly?</label>
+							<label for="fundowncare" class="guidance govuk-label">This might mean giving people medicines disguised in food or drink</label>
+							<div class="govuk-radios" data-module="radios">
+							<div class="govuk-radios__item">
+							<input class="govuk-radios__input" id="covertmedicines-yes" name="covertmedicines-check" type="radio" value="Yes" {{ checked('covertmedicines-check','Yes') }} data-aria-controls="conditional-covertmedicines">
+							<label class="govuk-label govuk-radios__label" for="covertmedicines-yes">Yes</label>
+							</div>
+							<div class="govuk-radios__item">
+								<input class="govuk-radios__input" id="covertmedicines-no" name="covertmedicines-check" type="radio" value="No" {{ checked('covertmedicines-check','No') }}>
+								<label class="govuk-label govuk-radios__label" for="covertmedicines-no">No</label>
+								</div>
+							<br>
+							</div>
+							<div class="govuk-form-group">
+								<label for="adminerrors" class="govuk-label">How many medicineadministration errors have there been in the past 12 months?</label>
+									<details class="govuk-details">
+										<summary class="govuk-details__summary">
+										<span class="govuk-details__summary-text">
+											What counts as an administration error?
+										</span>
+										</summary>
+										<div class="govuk-details__text">
+											A medicine administration error means:
+												<ul><li>someone being given too little or too much medicine</li>
+												<li>someone being given the wrong medicine</li>
+												<li>medicine being given to the wrong person</li>
+												<li>missed doses</li>
+												<li>medicine being given in a way that does not follow your medicines procedure or prescribing requirements</li>
+												</ul>
+											</div>
+									</details>
+								<input class="govuk-input govuk-input--width-10" type="text" id="adminerrors" name="adminerrors" value={{ data['adminerrors'] }}>
+							</div>
+							<div class="govuk-form-group">
+								<label for="recordingerrors" class="govuk-label">How many medicine recording errors have there been in the past 12 months?</label>
+								<details class="govuk-details">
+										<summary class="govuk-details__summary">
+										<span class="govuk-details__summary-text">
+											What counts as an recording error?
+										</span>
+										</summary>
+										<div class="govuk-details__text">
+											Medicine recording error means:
+												<ul><li>not recording when you have administered medicines, for example not signing MAR charts</li>
+												<li>not recording why doses have been missed</li>
+												<li>using the wrong key code for non-administration</li>
+												<li>signing for medicines you have not administered</li>
+												<li>inaccurate or unclear records</li>
+												<li>not enough information to administer medicines safely, for example instructions about taking medicines with or after food</li>
+												</ul>
+											</div>
+									</details>
+								<input class="govuk-input govuk-input--width-10" type="text" id="recordingerrors" name="recordingerrors" value={{ data['recordingerrors'] }}>
+							</div>	
+						</div>
+							<div class="govuk-label">
+								Do you currently administer controlled drugs?
+							</div>
+							<label for="NHSfunded" class="guidance govuk-label">This means you store or give controlled drugs to people who use your service. Controlled drugs are set out in the Misuse of Drugs Act 1971.</label>
+								<div class="govuk-radios" data-module="radios">
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="controlleddrugs-yes" name="controlleddrugs-check" type="radio" value="Yes" {{ checked('controlleddrugs-check','Yes') }} data-aria-controls="conditional-controlleddrugs">
+									<label class="govuk-label govuk-radios__label" for="controlleddrugs-yes">
+										Yes
+									</label>
+								</div>
+								<div class="govuk-radios__item">
+									<input class="govuk-radios__input" id="controlleddrugs-no" name="controlleddrugs-check" type="radio" value="No" {{ checked('controlleddrugs-check','No') }}>
+									<label class="govuk-label govuk-radios__label" for="controlleddrugs-no">
+										No
+									</label>
+								</div>
+							<br>
+							<div class="govuk-form-group">
+							<input class="govuk-button" type="submit" value="Save and continue"><br>
+						</fieldset>
+					  </div>
+					</div>
+				</div>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/current-application/view-full-form",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="staff-numbers-q14">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Staff</div>
+					<div class="gds_task_list">
+						<h2 class="govuk-label--l">Staff Numbers</h2>
+						<div class="govuk-form-group">
+							<label for="employNumber" class="govuk-label">How many people does your service employ?</label>
+							<label for="employNumber" class="guidance govuk-label">All staff, including temporary, pool and agency staff, students and volunteers. As well as care staff, include people who do things we do not regulate, like cooking or cleaning. Do not include vacancies.</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="employNumber" name="employNumber" value={{ data['employNumber'] }}>
+						</div>
+						
+						<label for="regulatednotice" class="govuk--mlabel">These questions are about staff who provide care as part of a regulated activity.</label>
+						<br><br>
+						<div class="govuk-form-group">
+							<label for="fulltimeNumber" class="govuk-label">How many full time equivalent posts do you employ?</label>
+							<label for="fulltimeNumber" class="guidance govuk-label">Use 37 hours a week as you basis for full time, even if your full time hours are different.</label>
+							<details class="govuk-details">
+									<summary class="govuk-details__summary">
+									<span class="govuk-details__summary-text">
+										How to calculate full time equivalent posts
+									</span>
+									</summary>
+									<div class="govuk-details__text">
+										Full time equivalent is a way of setting out the number of hours people work in a given period. It divides the total number of staff hours by the hours for one full time employee. 
+										To calculate it:
+										<ul>
+										<li>add together the hours worked by all your staff in one week</li>
+										<li>divide the total by 37</li>
+										</ul>
+										</div>
+								</details>
+							<input class="govuk-input govuk-input--width-10" type="text" id="fulltimeNumber" name="fulltimeNumber" value={{ data['fulltimeNumber'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="careregulatedactivity" class="govuk-label">How many of your staff provide care as part of regulated activity?</label>
+							<details class="govuk-details">
+									<summary class="govuk-details__summary">
+									<span class="govuk-details__summary-text">
+										Which staff to include
+									</span>
+									</summary>
+									<div class="govuk-details__text">
+										<ul>
+										<li>Give the number of people who provide care we regulate as part of their day to day job</li>
+										<li>Do not include people who do things we do not regulate, like cooking or cleaning</li>
+										<li>Count permanent, temportary, pool, agency staff, students and volunteers</li>
+										<li>Also include staff on zero hour contracts</li>
+										<li> Do not include vacancies</li>
+										</ul>
+										</div>
+								</details>
+							<input class="govuk-input govuk-input--width-10" type="text" id="careregulatedactivity" name="careregulatedactivity" value={{ data['careregulatedactivity'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="37hoursplusNumber" class="govuk-label">How many of your care staff work 37 hours a week or more?</label>
+							<label for="37hoursplusNumber" class="guidance govuk-label">Only include staff who provide care as part of a regulated activity</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="37hoursplusNumber" name="37hoursplusNumber" value={{ data['37hoursplusNumber'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="volunteersNumber" class="govuk-label">How many are volunteers?</label>
+							<label for="volunteersNumber" class="guidance govuk-label">Only include staff who provide care as part of a regulated activity</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="volunteersNumber" name="volunteersNumber" value={{ data['volunteersNumber'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="placementstudentNumber" class="govuk-label">How many students are on placement with your service?</label>
+							<label for="placementstudentNumber" class="guidance govuk-label">Only include staff who provide care as part of a regulated activity</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="placementstudentNumber" name="placementstudentNumber" value={{ data['placementstudentNumber'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="apprenticesNumber" class="govuk-label">How many apprentices do you have?</label>
+							<label for="apprenticesNumber" class="guidance govuk-label">Only include people who provide care as part of a regulated activity</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="apprenticesNumber" name="apprenticesNumber" value={{ data['apprenticesNumber'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="AgencyStaffHours" class="govuk-label">How many hours have agency staff worked in the past 28 days?</label>
+							<label for="AgencyStaffHours" class="guidance govuk-label">Only include care that is part of a regulated activity</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="AgencyStaffHours" name="AgencyStaffHours" value={{ data['AgencyStaffHours'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="newStarterNumbers" class="govuk-label">How many staff have started with your service in the past 12 months?</label>
+							<label for="newStarterNumbers" class="guidance govuk-label">Only include staff who provide care as part of a regulated activity</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="newStarterNumbers" name="newStarterNumbers" value={{ data['newStarterNumbers'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="StaffLessthan12weeks" class="govuk-label">How many of your staff started less than 12 weeks ago?</label>
+							<label for="StaffLessthan12weeks" class="guidance govuk-label">Only include staff who provide care as part of a regulated activity</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="StaffLessthan12weeks" name="StaffLessthan12weeks" value={{ data['StaffLessthan12weeks'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="LeaversNumbers" class="govuk-label">How many staff have left your service in the past 12 months?</label>
+							<label for="LeaversNumbers" class="guidance govuk-label">Only include staff who provided care as part of a regulated activity</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="LeaversNumbers" name="LeaversNumbers" value={{ data['LeaversNumbers'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="staffVacancies" class="govuk-label">How many staff vacancies do you have?</label>
+							<label for="staffVacancies" class="guidance govuk-label">Only include vancancies for staff who provide care as part of a tegulated activity</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="staffVacancies" name="staffVacancies" value={{ data['staffVacancies'] }}>
+						</div>
+					</div>
+				</div>
+				<div class="govuk-form-group">
+					<input class="govuk-button" type="submit" value="Save and continue"><br>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/current-application/view-full-form",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="Type-of-care-you-provide-q3-8">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Types of care you provide</div>
+					<div class="govuk-form-group">
+						<fieldset class="govuk-fieldset" aria-describedby="care-types">
+						  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+							<h2 class="govuk-label">
+							  Do you offer care for people with any of the following?
+							</h2>
+						  </legend>
+						  <span id="care-types" class="govuk-hint">
+							Select all that apply.
+						  </span>
+						  <div class="govuk-checkboxes">
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="dementia" name="care" type="checkbox" value="carcasses">
+							  <label class="govuk-label govuk-checkboxes__label" for="dementia">
+								Dementia
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="mental-health-needs" name="care" type="checkbox" value="mines">
+							  <label class="govuk-label govuk-checkboxes__label" for="mental-health-needs">
+								Mental Health Needs
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+							  <input class="govuk-checkboxes__input" id="drug-alcohol" name="care" type="checkbox" value="farm">
+							  <label class="govuk-label govuk-checkboxes__label" for="drug-alcohol">
+								Drug or Alcohol Issues
+							  </label>
+							</div>
+							<div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="eating-disorders" name="care" type="checkbox" value="farm">
+								<label class="govuk-label govuk-checkboxes__label" for="eating-disorders">
+								  Eating Disorders
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="sensory-impairment" name="care" type="checkbox" value="farm">
+								<label class="govuk-label govuk-checkboxes__label" for="sensory-impairment">
+								  Sensory Impairment
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="learning-disabilities-autism" name="care" type="checkbox" value="farm">
+								<label class="govuk-label govuk-checkboxes__label" for="learning-disabilities-autism">
+								 Learning Disabilities or Autism
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="physical-disabilities" name="care" type="checkbox" value="farm">
+								<label class="govuk-label govuk-checkboxes__label" for="physical-disabilities">
+								  Physical Disabilities
+								</label>
+							  </div>
+							  <div class="govuk-checkboxes__item">
+								<input class="govuk-checkboxes__input" id="none" name="care" type="checkbox" value="farm">
+								<label class="govuk-label govuk-checkboxes__label" for="none">
+								 None of These
+								</label>
+							  </div>
+								<br>
+							  <div class="govuk-form-group">
+								<fieldset class="govuk-fieldset">
+									<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+										<div class="govuk-label">
+											Do you offer care for people detained under the Mental Health Act?
+										</div>
+									</legend>
+									<div class="govuk-radios" data-module="radios">
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="mental-health-act" name="mental-health-act" type="radio" value="Yes" {{ checked('mental-health-act','Yes') }} data-aria-controls="conditional-how-contacted-conditional-1">
+											<label class="govuk-label govuk-radios__label" for="mental-health-act-yes">
+											Yes
+											</label>
+										</div>
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="mental-health-act-no" name="mental-health-act" type="radio" value="No" {{ checked('mental-health-act','No') }}>
+											<label class="govuk-label govuk-radios__label" for="mental-health-act-no">
+											No
+											</label>
+										</div>			
+						
+						  </div>
+						</fieldset>
+					  </div>
+					</div>
+				</div>
+				<div class="govuk-form-group">
+					<input class="govuk-button" type="submit" value="Save and continue"><br>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

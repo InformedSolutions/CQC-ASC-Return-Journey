@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/current-application/view-full-form",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="/application/current-application/view-full-form">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">How you run your service</div>
+					<div class="gds_task_list">
+						<h2 class="govuk-label--l">How people pay for their care</h2>
+						<div class="govuk-form-group">
+							<label for="fundowncare" class="govuk-label">How many of the people who use your service fully fund their own care?</label>	
+							<input class="govuk-input govuk-input--width-10" type="text" id="fundowncare" name="fundowncare" value={{ data['fundowncare'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="NHSfunded" class="govuk-label">How many are fully funded by the NHS?</label>
+							<input class="govuk-input govuk-input--width-10" type="text" id="NHSfunded" name="NHSfunded" value={{ data['NHSfunded'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="topupfunding" class="govuk-label">How many use their own money to top up NHS funding?</label>		
+							<input class="govuk-input govuk-input--width-10" type="text" id="topupfunding" name="topupfunding" value={{ data['topupfunding'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="localauthority" class="govuk-label">How many are fully funded by a local authority?</label>				
+							<input class="govuk-input govuk-input--width-10" type="text" id="localauthority" name="localauthority" value={{ data['localauthority'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="topuplocalfunding" class="govuk-label">How many use their own money to top up local authority funding?</label>							
+							<input class="govuk-input govuk-input--width-10" type="text" id="topuplocalfunding" name="topuplocalfunding" value={{ data['topuplocalfunding'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="jointfunding" class="govuk-label">How many are jointly funded by the NHS and a local authority?</label>		
+							<input class="govuk-input govuk-input--width-10" type="text" id="jointfunding" name="jointfunding" value={{ data['jointfunding'] }}>
+						</div>
+						<div class="govuk-form-group">
+							<label for="directpayment" class="govuk-label">How many contribute to the cost of their care with a direct payment or personal budget?</label>			
+							<input class="govuk-input govuk-input--width-10" type="text" id="directpayment" name="directpayment" value={{ data['directpayment'] }}>
+						</div>
+					</div>
+				</div>
+				<div class="govuk-form-group">
+					<input class="govuk-button" type="submit" value="Save and continue"><br>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

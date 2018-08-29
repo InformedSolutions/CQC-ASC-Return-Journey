@@ -1,0 +1,79 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/current-application/view-full-form",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="/application/current-application/view-full-form">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Quality of care</div>
+					<h2 class="govuk-label--l">Safe</h2>
+					<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+						<label class="govuk-label" for="safeService">
+							How do you make sure your service is safe? (500 words)
+						</label>
+						<details class="govuk-details">
+								<summary class="govuk-details__summary">
+								<span class="govuk-details__summary-text">
+									What to include in your answer
+								</span>
+								</summary>
+									<div class="govuk-details__text">
+										Use examples.<br><br>
+										Describe how you put policies into practice in real life and how you know your staff are following them.<br><br>
+										You could include how you:<br>
+										<ul><li>manage risks, premises, equipment, medicines and infection control</li>
+											<li>make sure you have enough staff and that they have the right skills</li>
+											<li>risks to people's safety while still making sure they have freedom of choice</li>
+											<li>learn from when things go wrong</li></ul>
+										Describe anything else you do that shows you run a safe service. Include anything you feel is original or exceptional<br><br>
+											
+										Write up to 500 words.
+									</div>
+							</details>
+							<textarea class="govuk-textarea" id="safeService" name="safeService" rows="5" aria-describedby="safeService-hint"></textarea>
+						<label class="govuk-label" for="saferService">
+							What things have you changed to make your service safer? (500 words)
+						</label>
+							<label for="localauthority" class="guidance govuk-label">Give examples of changes you have made since your last inspection or you last filled in a PIR, whichever is more recent. Explain how they have made a difference to people who use your service.</label>
+							<textarea class="govuk-textarea" id="Saferservice" name="Saferservice" rows="5" aria-describedby="Saferservice-hint"></textarea>
+						<label class="govuk-label" for="actionplan">
+							What is your action plan for safety over the next 12 months? (500 words)
+						</label>
+						<details class="govuk-details">
+								<summary class="govuk-details__summary">
+								<span class="govuk-details__summary-text">
+									What to include in your answer
+								</span>
+								</summary>
+									<div class="govuk-details__text">
+										Use examples. Tell us:<br>
+										<ul><li>what you are going to do
+											<li>who will do it</li>
+											<li>when will it be completed</li>
+											<li>what difference it will make for people who use your service</li></ul>	
+										Write up to 500 words.
+									</div>
+							</details>
+							<textarea class="govuk-textarea" id="actionplan" name="actionplan" rows="5" aria-describedby="actionplan-hint"></textarea>
+						<div class="govuk-form-group">
+							<input class="govuk-button" type="submit" value="Save and continue"><br>
+						</div>
+					</fieldset>
+					</div>
+					</div>
+				</div>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

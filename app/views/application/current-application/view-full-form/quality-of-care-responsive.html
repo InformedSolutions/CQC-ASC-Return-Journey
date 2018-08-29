@@ -1,0 +1,79 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/application/current-application/view-full-form",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="/application/current-application/view-full-form">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Quality of Care</div>
+					<h2 class="govuk-label--l">Responsive</h2>
+					<div class="govuk-form-group">
+					<fieldset class="govuk-fieldset">
+					<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+						<label class="govuk-label" for="responsiveService">
+							How do you make sure your service is responsive to people's needs? (500 words)
+						</label>
+												<details class="govuk-details">
+								<summary class="govuk-details__summary">
+								<span class="govuk-details__summary-text">
+									What to include in your answer
+								</span>
+								</summary>
+									<div class="govuk-details__text">
+										Use examples.<br><br>
+										Describe how you put policies into practice in real life and how you know your staff are following them.<br><br>
+										You could include how you:<br>
+										<ul><li>make sure people's care is well coordinated and person centred</li>
+											<li>listen to people who use your service so you understand their views and choices</li>
+											<li>listen to concerns, complaints and feedback and how you use them</li>
+											<li>make sure the care you give people at the end of their life takes account of their own choices</li></ul>
+										Describe anything else you do that shows you run a safe service. Include anything you feel is original or exceptional<br><br>
+											
+										Write up to 500 words.
+									</div>
+							</details>
+							<textarea class="govuk-textarea" id="responsiveService" name="responsiveService" rows="5" aria-describedby="responsiveService-hint"></textarea>
+						<label class="govuk-label" for="moreresponsiveService">
+							What things have you changed to make your service more responsive to people's needs? (500 words)
+						</label>
+							<label for="localauthority" class="guidance govuk-label">Only include things you have done since your last inspection or since you last filled in a PIR, whichever is more recent. Explain how they have made a difference to people who use your service.</label>
+							<textarea class="govuk-textarea" id="moreresponsiveService" name="moreresponsiveService" rows="5" aria-describedby="moreresponsiveService-hint"></textarea>
+						<label class="govuk-label" for="responsivePlan">
+							What are you planning to do int he next 12 months that will make your service more responsive to people's needs? (500 words)
+						</label>
+						<details class="govuk-details">
+								<summary class="govuk-details__summary">
+								<span class="govuk-details__summary-text">
+									What to include in your answer
+								</span>
+								</summary>
+									<div class="govuk-details__text">
+										Use examples. Tell us:<br>
+										<ul><li>what you are going to do
+											<li>who will do it
+											<li>when will it be completed
+											<li>what difference it will make for people who use your service</li></ul>	
+										Write up to 500 words.
+									</div>
+							</details>
+							<textarea class="govuk-textarea" id="responsivePlan" name="responsivePlan" rows="5" aria-describedby="responsivePlan-hint"></textarea>
+						<div class="govuk-form-group">
+							<input class="govuk-button" type="submit" value="Save and continue"><br>
+						</div>
+					</fieldset>
+					</div>
+					</div>
+				</div>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}

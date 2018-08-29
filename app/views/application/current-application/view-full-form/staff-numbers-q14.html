@@ -1,0 +1,51 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "staff-numbers-q1-13",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<section class="col-sm-9">
+			<form class="form" method="post" action="/application/current-application/view-full-form">
+				<div class="form-group js-form-wrapper form-wrapper" id="edit-task-list">
+					<div class="govuk-label--xl">Staff</div>
+					<div class="gds_task_list">
+						<h2 class="govuk-label--l">Staff Numbers</h2>
+
+							  <div class="govuk-form-group">
+								<fieldset class="govuk-fieldset">
+									<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+										<div class="govuk-label">
+											Do you have a registered manager?
+										</div>
+									</legend>
+									<div class="govuk-radios" data-module="radios">
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="registeredmanager" name="registeredmanager" type="radio" value="Yes" {{ checked('registeredmanager','Yes') }} data-aria-controls="conditional-how-contacted-conditional-1">
+											<label class="govuk-label govuk-radios__label" for="registeredmanager-yes">
+											Yes
+											</label>
+										</div>
+										<div class="govuk-radios__item">
+											<input class="govuk-radios__input" id="registeredmanager-no" name="registeredmanager" type="radio" value="No" {{ checked('registeredmanager','No') }}>
+											<label class="govuk-label govuk-radios__label" for="registeredmanager-no">
+											No
+											</label>
+										</div>			
+						
+						  </div>
+						</fieldset>
+					  </div>
+					</div>
+				</div>
+				<div class="govuk-form-group">
+					<input class="govuk-button" type="submit" value="Save and continue"><br>
+				</div>
+			</form>
+		</section>
+	</div>
+</div>
+{% endblock %}
