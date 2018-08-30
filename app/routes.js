@@ -30,17 +30,17 @@ router.get('/application/task_list', function (req, res) {
 
 router.get('/application/current-application/view-full-form', function (req, res) {
   // Complete tag
-  req.session.x = req.session.x || req.query['x'] || false;
-  req.session.y = req.session.y || req.query['y'] || false;
+  req.session.NumberOfPeople = req.session.NumberOfPeople || req.query['NumberOfPeople'] || false;
+  req.session.TypeOfCare = req.session.TypeOfCare || req.query['TypeOfCare'] || false;
 
 
   var showFullForm = false;
 
-  if (req.session.x && req.session.y) showFullForm=true;
+  if (req.session.NumberOfPeople && req.session.y) showFullForm=true;
 
   res.render('application/current-application/view-full-form', {
-    x: req.session.x,
-    y: req.session.y,
+    NumberOfPeople: req.session.NumberOfPeople,
+    TypeOfCare: req.session.TypeOfCare,
     showFullForm: showFullForm
     });
 });

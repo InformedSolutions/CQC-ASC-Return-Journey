@@ -22,9 +22,13 @@ text: "Back"
 							<ul class="app-task-list__items">
 								<li class="app-task-list__item">
 									<a class="left" href="view-full-form/people-that-use-your-service-q1-2.html">Number of people</a>
+									{% if NumberOfPeople %} {% include "../../includes/complete.html" %}
+									{% else %}{% include "../../includes/todo.html" %}{% endif %}
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="view-full-form/Type-of-care-you-provide-q1-2.html">Type of care you provide</a>
+									{% if TypeOfCare %} {% include "../../includes/complete.html" %}
+									{% else %}{% include "../../includes/todo.html" %}{% endif %}
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="people_that_use_your_service/number_of_people
@@ -141,24 +145,28 @@ text: "Back"
 					</li>
 					</ol>
 					{% if showFullForm %}
-							<h2 class="app-task-list__section">
-								<span class="app-task-list__section-number">5. </span> Review, reflect and submit
-							</h2>
-							<ul class="app-task-list__items">
-								<li class="app-task-list__item">
-										<a href="view-full-form.html">Review, reflect and submit</a>
-								</li>
-							</ul>
-						{% else %}
-							<h2 class="app-task-list__section-inactive">
-								<span class="app-task-list__section-number">5. </span> Review, reflect and submit
-							</h2>
-							<ul class="app-task-list__items">
-								<li class="app-task-list__item">
-										<span>Review, reflect and submit</span>
-								</li>
-							</ul>
-						{% endif %}
+						<h2 class="app-task-list__section">
+							<span class="app-task-list__section-number">5. </span> Review and submit
+						</h2>
+						<ul class="app-task-list__items">
+							<li class="app-task-list__item">
+								<div class="app-task-list__task-name">
+									<a href="view-full-form.html">Review and submit</a>
+								</div>
+							</li>
+						</ul>
+					{% else %}
+						<h2 class="app-task-list__section-inactive">
+							<span class="app-task-list__section-number">5. </span> Review and submit
+						</h2>
+						<ul class="app-task-list__items">
+							<li class="app-task-list__item">
+								<div class="app-task-list__task-name-inactive">
+									<span>Review and submit</span>
+								</div>
+							</li>
+						</ul>
+					{% endif %}
 
 				</div>
 			</div>
