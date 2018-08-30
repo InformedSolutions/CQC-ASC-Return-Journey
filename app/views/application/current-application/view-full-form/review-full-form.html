@@ -1,0 +1,162 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "../view-full-form",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="form-section-title">Millennium House</div>
+		<br>
+		<h1 class="govuk-heading-xl">
+			Check your answers before sending your application
+		</h1>
+		<!-- only add a heading for a list if there is more than one list -->
+		<h2 class="govuk-heading-l">
+			People that use your service
+		</h2>
+		<h2 class="govuk-heading-m">
+			Number of people
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people do you care for as part of a regulated activity?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['peopleNumber'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="people-that-use-your-service-q1-2.html">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<br>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+                    How many of these people are cared for in bed?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['bedNumber'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="people-that-use-your-service-q1-2.html">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people started using your service in the past 12 months?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['startNumber'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="people-that-use-your-service-q3-4.html">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people stopped using your service in the past 12 months?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['stoppedNumber'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="people-that-use-your-service-q3-4.html">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					How many people have you served notice on to leave the service in the past 12 months?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['leaveNumber'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="people-that-use-your-service-q5.html">
+					Change<span class="govuk-visually-hidden"> DoLS</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
+		<br>
+		<h2 class="govuk-heading-m">
+			Type of care you provide
+		</h2>
+		<!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+		<!--   * `app-check-your-answers--short` for short questions -->
+		<!--   * `app-check-your-answers__questions-long` for long questions -->
+		<!--   * none for single group of q&a -->
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Do you offer care for people with any of the following?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+						{{ data['dementia'] }} {{ data['mental-health-needs'] }} {{ data['drug-alcohol'] }} {{ data['eating-disorders'] }} {{ data['sensory-impairment'] }} {{ data['learning-disabilities-autism'] }} {{ data['physical-disabilities'] }} {{ data['none'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="Type-of-care-you-provide-q1-2.html">
+						Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Do you offer care for people detained under the Mental Health Act?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['mental-health-act'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="Type-of-care-you-provide-q3-8.html">
+						Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Does your service provide rehabilitation or reablement?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['rehabilitation-and-reablement-check'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="Type-of-care-you-provide-q3-8.html">
+						Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Do you use technology to help with rehabilitation and reablement?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['technology-check'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="Type-of-care-you-provide-q3-8.html">
+						Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
+	</div>
+</div>
+<a href="../../confirmation" class="govuk-button" role="button">Submit</a>
+</div>
+</div>
+{% endblock %}

@@ -36,7 +36,7 @@ router.get('/application/current-application/view-full-form', function (req, res
 
   var showFullForm = false;
 
-  if (req.session.NumberOfPeople && req.session.y) showFullForm=true;
+  if (req.session.NumberOfPeople && req.session.TypeOfCare) showFullForm=true;
 
   res.render('application/current-application/view-full-form', {
     NumberOfPeople: req.session.NumberOfPeople,
