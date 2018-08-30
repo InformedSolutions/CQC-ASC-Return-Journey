@@ -79,6 +79,13 @@ text: "Back"
 								<span class="app-task-list__section-number">3. </span> How you run your service
 							</h2>
 							<ul class="app-task-list__items">
+								</li>
+								<li class="app-task-list__item">
+										<a class="left" href="view-full-form/how-people-pay-for-their-care.html">How people pay for their care</a>
+									</li>
+								<li class="app-task-list__item">
+									<a class="left" href="view-full-form/medicines-management.html">Medicines management</a>
+								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/capacity">Admissions</a>
 								</li>
@@ -89,16 +96,10 @@ text: "Back"
 									<a class="left" href="how_you_run_your_service/how_people_pay">Commissioning</a>
 								</li>
 								<li class="app-task-list__item">
-									<a class="left" href="view-full-form/how-people-pay-for-their-care.html">How people pay for their care</a>
-								</li>
-								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">How you identify risks</a>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/death_and_serious_incident">Deaths and serious incidents</a>
-								</li>
-								<li class="app-task-list__item">
-									<a class="left" href="view-full-form/medicines-management.html">Medicines management</a>
 								</li>
 								<li class="app-task-list__item">
 									<a class="left" href="how_you_run_your_service/how_people_pay">How you work with other services</a>
@@ -136,8 +137,29 @@ text: "Back"
 									<a  class="left" href="view-full-form/quality-of-care-well-led.html">Well led</a>
 								</li>
 							</ul>
+							
 					</li>
 					</ol>
+					{% if showFullForm %}
+							<h2 class="app-task-list__section">
+								<span class="app-task-list__section-number">5. </span> Review, reflect and submit
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+										<a href="view-full-form.html">Review, reflect and submit</a>
+								</li>
+							</ul>
+						{% else %}
+							<h2 class="app-task-list__section-inactive">
+								<span class="app-task-list__section-number">5. </span> Review, reflect and submit
+							</h2>
+							<ul class="app-task-list__items">
+								<li class="app-task-list__item">
+										<span>Review, reflect and submit</span>
+								</li>
+							</ul>
+						{% endif %}
+
 				</div>
 			</div>
 		</form>

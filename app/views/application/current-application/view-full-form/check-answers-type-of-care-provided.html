@@ -1,0 +1,84 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+href: "Type-of-care-you-provide-q3-8",
+text: "Back"
+}) }}
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-l">
+			Check your answers before sending your application
+		</h1>
+		<h2 class="govuk-heading-m">
+			Type of care you provide
+		</h2>
+
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Do you offer care for people with any of the following?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+						{{ data['dementia'] }} {{ data['mental-health-needs'] }} {{ data['drug-alcohol'] }} {{ data['eating-disorders'] }} {{ data['sensory-impairment'] }} {{ data['learning-disabilities-autism'] }} {{ data['physical-disabilities'] }} {{ data['none'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="Type-of-care-you-provide-q1-2.html">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
+		<dl class="app-check-your-answers app-check-your-answers--short">
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Do you offer care for people detained under the Mental Health Act?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['mental-health-act'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="Type-of-care-you-provide-q1-2.html">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Does your service provide rehabilitation or reablement?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['rehabilitation-and-reablement-check'] }}
+				</dd>
+				<dd class="app-check-your-answers__change">
+					<a href="Type-of-care-you-provide-q3-8.html">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+			<div class="app-check-your-answers__contents">
+				<dt class="app-check-your-answers__question">
+					Do you use technology to help with rehabilitation and reablement?
+				</dt>
+				<dd class="app-check-your-answers__answer">
+					{{ data['technology-check'] }}
+				</dd>
+
+				<dd class="app-check-your-answers__change">
+					<a href="Type-of-care-you-provide-q3-8.html">
+					Change<span class="govuk-visually-hidden"> number of people</span>
+					</a>
+				</dd>
+			</div>
+		</dl>
+	</div>
+</div>
+</dl>
+<p>
+	By submitting this information you are confirming that, to the best of your knowledge, the details you are providing are correct.
+</p>
+<a href="../view-full-form?y=true" class="govuk-button" role="button">Confirm and continue</a>
+</div>
+</div>
+{% endblock %}

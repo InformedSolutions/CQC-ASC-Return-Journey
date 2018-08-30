@@ -28,6 +28,23 @@ router.get('/application/task_list', function (req, res) {
     });
 });
 
+router.get('/application/current-application/view-full-form', function (req, res) {
+  // Complete tag
+  req.session.x = req.session.x || req.query['x'] || false;
+  req.session.y = req.session.y || req.query['y'] || false;
+
+
+  var showFullForm = false;
+
+  if (req.session.x && req.session.y) showFullForm=true;
+
+  res.render('application/current-application/view-full-form', {
+    x: req.session.x,
+    y: req.session.y,
+    showFullForm: showFullForm
+    });
+});
+
 
 
 router.post('/application/how_you_run_your_service/check_your_answers', function (req, res) {
@@ -42,6 +59,21 @@ router.post('/application/how_you_run_your_service/check_your_answers', function
   res.render('application/how_you_run_your_service/check_your_answers', {
     optional: true,
     divShow: req.session.divShow
+  });
+});
+
+router.post('/application/current-application/view-full-form/check-answers-type-of-care-provided', function (req, res) {
+  // Complete tag
+  if (req.session.data['technology-check'] == "Yes"){
+    req.session.divShow2 = true;
+  } else {
+    req.session.divShow2 = false;
+  }
+
+
+  res.render('application/current-application/view-full-form/check-answers-type-of-care-provided', {
+    optional: true,
+    divShow2: req.session.divShow2
   });
 });
 
